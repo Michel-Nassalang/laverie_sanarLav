@@ -3,14 +3,17 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\DBAL\Types\Types;
+use Doctrine\Common\Collections\Collection;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
-#[ORM\Table(name: '`user`')]
-class User
+#[UniqueEntity(fields: ['email'], message: 'Nous avons déja un compte avec cette adresse email.')]
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -23,20 +26,17 @@ class User
     #[ORM\Column(length: 100)]
     private ?string $prenom = null;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(length: 180, unique: true)]
     private ?string $email = null;
+
+    #[ORM\Column]
+    private array $roles = ['ROLE_CLIENT', 'ROLE_EMPLOYER', 'ROLE_ADMIN'];
 
     #[ORM\Column(length: 50, nullable: true)]
     private ?string $tel = null;
 
     #[ORM\Column(length: 100, nullable: true)]
     private ?string $adresse = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $role = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $mdp = null;
 
     #[ORM\OneToMany(mappedBy: 'client_id', targetEntity: Commande::class)]
     private Collection $commandes;
@@ -55,6 +55,12 @@ class User
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateDelete = null;
+
+    /**
+     * @var string The hashed password
+     */
+    #[ORM\Column]
+    private ?string $password = null;
 
     public function __construct()
     {
@@ -128,26 +134,46 @@ class User
         return $this;
     }
 
-    public function getRole(): ?string
+    /**
+     * A visual identifier that represents this user.
+     *
+     * @see UserInterface
+     */
+    public function getUserIdentifier(): string
     {
-        return $this->role;
+        return (string) $this->email;
     }
 
-    public function setRole(string $role): self
+    /**
+     * @see UserInterface
+     */
+    public function getRoles(): array
     {
-        $this->role = $role;
+        $roles = $this->roles;
+        // guarantee every user at least has ROLE_USER
+        $roles[] = 'ROLE_USER';
+
+        return array_unique($roles);
+    }
+
+    public function setRoles(array $roles): self
+    {
+        $this->roles = $roles;
 
         return $this;
     }
 
-    public function getMdp(): ?string
+    /**
+     * @see PasswordAuthenticatedUserInterface
+     */
+    public function getPassword(): string
     {
-        return $this->mdp;
+        return $this->password;
     }
 
-    public function setMdp(string $mdp): self
+    public function setPassword(string $password): self
     {
-        $this->mdp = $mdp;
+        $this->password = $password;
 
         return $this;
     }
@@ -276,5 +302,14 @@ class User
         $this->dateDelete = $dateDelete;
 
         return $this;
+    }
+
+    /**
+     * @see UserInterface
+     */
+    public function eraseCredentials()
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
     }
 }
