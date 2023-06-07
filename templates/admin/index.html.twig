@@ -1,18 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Compte Administrateur{% endblock %}
 
 {% block body %}
 <div class="container-xxl py-5 bg-dark hero-header mb-5">
 	<div class="container text-center my-5 pt-5 pb-4">
-		<h1 class="display-3 text-white mb-3 animated slideInDown">Administration</h1>
+		<h1 class="display-3 text-white mb-3 animated slideInDown">Compte administrateur</h1>
+		<a href="/logout"><i class="fa fa-power-off fa-1x text-primary"></i></a>
 		<nav aria-label="breadcrumb">
 			<ol class="breadcrumb justify-content-center text-uppercase">
 				<li class="breadcrumb-item">
 					<a href="/">Acceuil</a>
 				</li>
-				<li class="breadcrumb-item text-white active" aria-current="page">Administration</li>
+				<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}} {{app.user.nom}}</li>
 			</ol>
+			<p class="">{{app.user.email}}</p>
 		</nav>
 	</div>
 </div>

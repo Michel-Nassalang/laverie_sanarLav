@@ -39,10 +39,6 @@ class RegistrationFormType extends AbstractType
                         // max length allowed by Symfony for security reasons
                         'max' => 4096,
                     ]),
-                    new EqualTo([
-                        'propertyPath' => 'replainPassword',
-                        'message' => 'Les mots de passe ne correspondent pas.',
-                    ]),
                 ],
             ])
             ->add('replainPassword', PasswordType::class, [ 'mapped' => false])
