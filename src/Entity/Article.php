@@ -121,27 +121,7 @@ class Article
         return $this->reparations;
     }
 
-    public function addReparation(Reparation $reparation): self
-    {
-        if (!$this->reparations->contains($reparation)) {
-            $this->reparations->add($reparation);
-            $reparation->setArticleId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeReparation(Reparation $reparation): self
-    {
-        if ($this->reparations->removeElement($reparation)) {
-            // set the owning side to null (unless already changed)
-            if ($reparation->getArticleId() === $this) {
-                $reparation->setArticleId(null);
-            }
-        }
-
-        return $this;
-    }
+    
 
     public function getDateCreate(): ?\DateTimeInterface
     {
@@ -177,5 +157,9 @@ class Article
         $this->dateDelete = $dateDelete;
 
         return $this;
+    }
+    public function __toString(): string
+    {
+        return $this->nom;
     }
 }

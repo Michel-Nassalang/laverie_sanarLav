@@ -20,11 +20,14 @@ class Transaction
     #[ORM\Column]
     private ?int $montant = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
     #[ORM\OneToOne(inversedBy: 'transaction', cascade: ['persist', 'remove'])]
     private ?Commande $commande_id = null;
+
+    #[ORM\ManyToOne(inversedBy: 'transactions')]
+    private ?User $client_id = null;
 
     public function getId(): ?int
     {
@@ -77,6 +80,23 @@ class Transaction
         $this->commande_id = $commande_id;
 
         return $this;
+    }
+
+    public function getClientId(): ?User
+    {
+        return $this->client_id;
+    }
+
+    public function setClientId(?User $client_id): self
+    {
+        $this->client_id = $client_id;
+
+        return $this;
+    }
+
+    public function __toString(): string
+    {
+        return "Transaction - ". $this-> date->format('Y-m-d H:i:s');
     }
 
 }

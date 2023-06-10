@@ -26,8 +26,6 @@ class Reparation
     #[ORM\ManyToOne(inversedBy: 'reparations')]
     private ?User $user_id = null;
 
-    #[ORM\ManyToOne(inversedBy: 'reparations')]
-    private ?Article $article_id = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $dateCreate = null;
@@ -37,6 +35,13 @@ class Reparation
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateDelete = null;
+
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $date = null;
+
+    #[ORM\ManyToOne(inversedBy: 'reparations')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Commande $commande_id = null;
 
     public function getId(): ?int
     {
@@ -91,17 +96,6 @@ class Reparation
         return $this;
     }
 
-    public function getArticleId(): ?Article
-    {
-        return $this->article_id;
-    }
-
-    public function setArticleId(?Article $article_id): self
-    {
-        $this->article_id = $article_id;
-
-        return $this;
-    }
 
     public function getDateCreate(): ?\DateTimeInterface
     {
@@ -137,5 +131,33 @@ class Reparation
         $this->dateDelete = $dateDelete;
 
         return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getCommandeId(): ?Commande
+    {
+        return $this->commande_id;
+    }
+
+    public function setCommandeId(?Commande $commande_id): self
+    {
+        $this->commande_id = $commande_id;
+
+        return $this;
+    }
+    public function __toString(): string
+    {
+        return "Reclammation - ". $this-> date->format('Y-m-d H:i:s'); // Retourne le nom de la commande comme représentation en chaîne
     }
 }

@@ -19,9 +19,6 @@ class Commande
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $date = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $nb_articles = null;
-
     #[ORM\Column(length: 50)]
     private ?string $statut = null;
 
@@ -29,8 +26,6 @@ class Commande
     #[ORM\JoinColumn(nullable: false)]
     private ?User $client_id = null;
 
-    #[ORM\OneToMany(mappedBy: 'commande_id', targetEntity: Article::class)]
-    private Collection $articles;
 
     #[ORM\OneToOne(mappedBy: 'commande_id', cascade: ['persist', 'remove'])]
     private ?Transaction $transaction = null;
@@ -41,9 +36,18 @@ class Commande
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $dateDelete = null;
 
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    private ?\DateTimeInterface $dateCreate = null;
+
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    private ?Article $article_id = null;
+
+    #[ORM\OneToMany(mappedBy: 'commande_id', targetEntity: Reparation::class)]
+    private Collection $reparations;
+
     public function __construct()
     {
-        $this->articles = new ArrayCollection();
+        $this->reparations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -59,18 +63,6 @@ class Commande
     public function setDate(\DateTimeInterface $date): self
     {
         $this->date = $date;
-
-        return $this;
-    }
-
-    public function getNbArticles(): ?int
-    {
-        return $this->nb_articles;
-    }
-
-    public function setNbArticles(?int $nb_articles): self
-    {
-        $this->nb_articles = $nb_articles;
 
         return $this;
     }
@@ -95,36 +87,6 @@ class Commande
     public function setClientId(?User $client_id): self
     {
         $this->client_id = $client_id;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, Article>
-     */
-    public function getArticles(): Collection
-    {
-        return $this->articles;
-    }
-
-    public function addArticle(Article $article): self
-    {
-        if (!$this->articles->contains($article)) {
-            $this->articles->add($article);
-            $article->setCommandeId($this);
-        }
-
-        return $this;
-    }
-
-    public function removeArticle(Article $article): self
-    {
-        if ($this->articles->removeElement($article)) {
-            // set the owning side to null (unless already changed)
-            if ($article->getCommandeId() === $this) {
-                $article->setCommandeId(null);
-            }
-        }
 
         return $this;
     }
@@ -173,6 +135,64 @@ class Commande
         $this->dateDelete = $dateDelete;
 
         return $this;
+    }
+
+    public function getDateCreate(): ?\DateTimeInterface
+    {
+        return $this->dateCreate;
+    }
+
+    public function setDateCreate(\DateTimeInterface $dateCreate): self
+    {
+        $this->dateCreate = $dateCreate;
+
+        return $this;
+    }
+
+    public function getArticleId(): ?Article
+    {
+        return $this->article_id;
+    }
+
+    public function setArticleId(?Article $article_id): self
+    {
+        $this->article_id = $article_id;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Reparation>
+     */
+    public function getReparations(): Collection
+    {
+        return $this->reparations;
+    }
+
+    public function addReparation(Reparation $reparation): self
+    {
+        if (!$this->reparations->contains($reparation)) {
+            $this->reparations->add($reparation);
+            $reparation->setCommandeId($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReparation(Reparation $reparation): self
+    {
+        if ($this->reparations->removeElement($reparation)) {
+            // set the owning side to null (unless already changed)
+            if ($reparation->getCommandeId() === $this) {
+                $reparation->setCommandeId(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString(): string
+    {
+        return "Commande - ". $this-> date->format('Y-m-d H:i:s') . ' - '.$this->article_id ;
     }
 
 }

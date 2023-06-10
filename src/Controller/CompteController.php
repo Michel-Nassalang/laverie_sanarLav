@@ -14,8 +14,12 @@ class CompteController extends AbstractController
         /** @var UserInterface $user */
         $user = $this->getUser();
         $email = $user->getEmail();
+        $commandes = $user->getCommandes();
+        $reparations = $user->getReparations();
+        $transactions = $user->getTransactions();
+        $abonnements = $user->getAbonnements();
         return $this->render('compte/index.html.twig', [
-            'controller_name' => 'CompteController',
+            'commandes' => $commandes, 'reparations' => $reparations ,'transactions' => $transactions, 'abonnements' => $abonnements
         ]);
     }
 }

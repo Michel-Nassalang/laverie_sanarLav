@@ -2,6 +2,10 @@
 
 namespace App\Controller;
 
+use App\Repository\AbonnementRepository;
+use App\Repository\CommandeRepository;
+use App\Repository\ReparationRepository;
+use App\Repository\TransactionRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -9,10 +13,28 @@ use Symfony\Component\Routing\Annotation\Route;
 class EmployerController extends AbstractController
 {
     #[Route('/employer', name: 'app_employer')]
-    public function index(): Response
+    public function index(CommandeRepository $commandeRepository, ReparationRepository $reparationRepository, AbonnementRepository $abonnementRepository, TransactionRepository $transactionRepository): Response
     {
+        /** @var UserInterface $user */
+        $user = $this->getUser();
+        $email = $user->getEmail();
+        $commandesClients = $commandeRepository->findAll();
+        $reparationsClients = $reparationRepository->findAll();
+        $abonnementsClients = $abonnementRepository->findAll();
+        $transactionsClients = $transactionRepository->findAll();
+        $commandes = $user->getCommandes();
+        $reparations = $user->getReparations();
+        $transactions = $user->getTransactions();
+        $abonnements = $user->getAbonnements();
         return $this->render('employer/index.html.twig', [
-            'controller_name' => 'EmployerController',
+            'commandes' => $commandes, 
+            'reparations' => $reparations, 
+            'transactions' => $transactions, 
+            'abonnements' => $abonnements,
+            'commandesClients' => $commandesClients,
+            'reparationsClients' => $reparationsClients,
+            'abonnementsClients' => $abonnementsClients,
+            'transactionsClients' => $transactionsClients,
         ]);
     }
 }
