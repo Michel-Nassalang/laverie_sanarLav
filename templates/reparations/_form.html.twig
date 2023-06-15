@@ -1,5 +1,5 @@
 <!-- Container Form Réparations Start -->
-<div class="container-xxl pb-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="poidsprix">
+<div class="container-xxl pb-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="">
 	<div class="row g-0">
 		<div class="col-lg-6">
 			<div class="imagelogin">
@@ -20,7 +20,7 @@
 						<div class="form-floating">
 							<select class="form-select" id="select2" name="{{ field_name(form.commande_id) }}">
 								{% for commande in commandes %}
-									<option value="{{commande.id}}">{{commande.date | date('d-m-Y')}}
+									<option value="{{commande.id}}">{{commande}}
 									</option>
 								{% endfor %}
 							</select>
@@ -64,7 +64,6 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </div>
 

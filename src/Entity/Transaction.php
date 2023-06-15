@@ -29,6 +29,9 @@ class Transaction
     #[ORM\ManyToOne(inversedBy: 'transactions')]
     private ?User $client_id = null;
 
+    #[ORM\ManyToOne(inversedBy: 'transactions_employer')]
+    private ?User $userCreate = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -97,6 +100,18 @@ class Transaction
     public function __toString(): string
     {
         return "Transaction - ". $this-> date->format('Y-m-d H:i:s');
+    }
+
+    public function getUserCreate(): ?User
+    {
+        return $this->userCreate;
+    }
+
+    public function setUserCreate(?User $userCreate): self
+    {
+        $this->userCreate = $userCreate;
+
+        return $this;
     }
 
 }

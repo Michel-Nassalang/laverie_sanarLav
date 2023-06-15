@@ -68,6 +68,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'client_id', targetEntity: Abonnement::class)]
     private Collection $abonnements;
 
+    #[ORM\OneToMany(mappedBy: 'userCreate', targetEntity: Transaction::class)]
+    private Collection $transactions_employer;
+
     public function __construct()
     {
         $this->commandes = new ArrayCollection();
@@ -75,6 +78,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->reparations = new ArrayCollection();
         $this->transactions = new ArrayCollection();
         $this->abonnements = new ArrayCollection();
+        $this->transactions_employer = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -375,6 +379,40 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
             // set the owning side to null (unless already changed)
             if ($abonnement->getClientId() === $this) {
                 $abonnement->setClientId(null);
+            }
+        }
+
+        return $this;
+    }
+    public function __toString(): string
+    {
+        return $this->getPrenom() . ' ' . $this->getNom() .'(' . $this->getEmail() . ')';
+    }
+
+    /**
+     * @return Collection<int, Transaction>
+     */
+    public function getTransactionsEmployer(): Collection
+    {
+        return $this->transactions_employer;
+    }
+
+    public function addTransactionsEmployer(Transaction $transactionsEmployer): self
+    {
+        if (!$this->transactions_employer->contains($transactionsEmployer)) {
+            $this->transactions_employer->add($transactionsEmployer);
+            $transactionsEmployer->setUserCreate($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTransactionsEmployer(Transaction $transactionsEmployer): self
+    {
+        if ($this->transactions_employer->removeElement($transactionsEmployer)) {
+            // set the owning side to null (unless already changed)
+            if ($transactionsEmployer->getUserCreate() === $this) {
+                $transactionsEmployer->setUserCreate(null);
             }
         }
 

@@ -6,7 +6,6 @@ use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class ContactType extends AbstractType
 {
@@ -15,15 +14,6 @@ class ContactType extends AbstractType
         $builder
             ->add('sujet')
             ->add('texte')
-            ->add('date', DateTimeType::class, [
-                'widget' => 'single_text',
-                'format' => 'MM/dd/yyyy h:mm a',
-                'html5' => false,
-                'attr' => [
-                    'class' => 'form-control datetimepicker-input',
-                    'data-toggle' => 'datetimepicker',
-                ],
-            ])
             ->add('email')
             ->add('nom');
     }

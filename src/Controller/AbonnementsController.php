@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Abonnement;
 use App\Form\AbonnementType;
 use DateTime;
+use Symfony\Component\Security\Core\Security;
 use App\Repository\AbonnementRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,6 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/abonnements')]
 class AbonnementsController extends AbstractController
 {
+    private $security;
     #[Route('/', name: 'app_abonnements_index', methods: ['GET'])]
     public function index(AbonnementRepository $abonnementRepository): Response
     {
@@ -23,7 +25,7 @@ class AbonnementsController extends AbstractController
     }
 
     #[Route('/new', name: 'app_abonnements_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, AbonnementRepository $abonnementRepository): Response
+    public function new(Request $request, AbonnementRepository $abonnementRepository, Security $security): Response
     {
         $abonnement = new Abonnement();
         $form = $this->createForm(AbonnementType::class, $abonnement);
@@ -34,7 +36,14 @@ class AbonnementsController extends AbstractController
             $abonnement->setDatecreate(new DateTime("now"));
             $abonnementRepository->save($abonnement, true);
 
-            return $this->redirectToRoute('app_compte', [], Response::HTTP_SEE_OTHER);
+            $this->security = $security;
+            if ($this->security->isGranted('ROLE_ADMIN')) {
+                return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
+            } elseif ($this->security->isGranted('ROLE_EMPLOYER')) {
+                return $this->redirectToRoute('app_employer', [], Response::HTTP_SEE_OTHER);
+            } else {
+                return $this->redirectToRoute('app_compte', [], Response::HTTP_SEE_OTHER);
+            }
         }
 
         return $this->renderForm('abonnements/new.html.twig', [
@@ -52,15 +61,23 @@ class AbonnementsController extends AbstractController
     }
 
     #[Route('/{id}/edit', name: 'app_abonnements_edit', methods: ['GET', 'POST'])]
-    public function edit(Request $request, Abonnement $abonnement, AbonnementRepository $abonnementRepository): Response
+    public function edit(Request $request, Abonnement $abonnement, AbonnementRepository $abonnementRepository, Security $security): Response
     {
         $form = $this->createForm(AbonnementType::class, $abonnement);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $abonnement->setDateUpdate(new \DateTime("now"));
             $abonnementRepository->save($abonnement, true);
 
-            return $this->redirectToRoute('app_abonnements_index', [], Response::HTTP_SEE_OTHER);
+            $this->security = $security;
+            if ($this->security->isGranted('ROLE_ADMIN')) {
+                return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
+            } elseif ($this->security->isGranted('ROLE_EMPLOYER')) {
+                return $this->redirectToRoute('app_employer', [], Response::HTTP_SEE_OTHER);
+            } else {
+                return $this->redirectToRoute('app_compte', [], Response::HTTP_SEE_OTHER);
+            }
         }
 
         return $this->renderForm('abonnements/edit.html.twig', [
@@ -70,12 +87,18 @@ class AbonnementsController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_abonnements_delete', methods: ['POST'])]
-    public function delete(Request $request, Abonnement $abonnement, AbonnementRepository $abonnementRepository): Response
+    public function delete(Request $request, Abonnement $abonnement, AbonnementRepository$abonnementRepository, Security $security): Response
     {
         if ($this->isCsrfTokenValid('delete'.$abonnement->getId(), $request->request->get('_token'))) {
             $abonnementRepository->remove($abonnement, true);
         }
-
-        return $this->redirectToRoute('app_abonnements_index', [], Response::HTTP_SEE_OTHER);
+        $this->security = $security;
+        if ($this->security->isGranted('ROLE_ADMIN')) {
+            return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
+        } elseif ($this->security->isGranted('ROLE_EMPLOYER')) {
+            return $this->redirectToRoute('app_employer', [], Response::HTTP_SEE_OTHER);
+        } else {
+            return $this->redirectToRoute('app_compte', [], Response::HTTP_SEE_OTHER);
+        }
     }
 }

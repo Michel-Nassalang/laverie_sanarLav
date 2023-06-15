@@ -6,6 +6,7 @@ use App\Entity\Transaction;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 
 class TransactionType extends AbstractType
 {
@@ -14,7 +15,6 @@ class TransactionType extends AbstractType
         $builder
             ->add('modepaiement')
             ->add('montant')
-            ->add('date')
             ->add('commande_id')
             ->add('client_id')
         ;
