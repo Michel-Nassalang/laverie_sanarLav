@@ -30,7 +30,7 @@
 
 	<div class="container">
 		<div class="col-lg-10">
-			<h5 class="section-title ff-secondary text-start text-primary fw-normal">Abonnements{% endtrans %}
+			<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Abonnements{% endtrans %}
 				<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h5>
 			<h1 class="mb-4">{% trans %}Abonnement de{% endtrans %}
 				{{ abonnement.datedebut ? abonnement.datedebut|date('Y-m-d') : '' }}

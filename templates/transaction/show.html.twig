@@ -13,7 +13,7 @@
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil{% endtrans %}</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
@@ -35,7 +35,7 @@
 			{% if is_granted('ROLE_EMPLOYER') %}
 				<h1 class="mb-4">{% trans %}transaction de la{% endtrans %}
 					{{ transaction.commandeid }}
-					pour{% endtrans %}
+					{% trans %}pour{% endtrans %}
 					{{ transaction.clientid }}</h1>
 			{% else %}
 				<h1 class="mb-4">{% trans %}transaction de la{% endtrans %}

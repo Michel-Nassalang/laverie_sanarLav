@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="kxRNdHE" resname="Modification Abonnement">
+        <source>Modification Abonnement</source>
+        <target>Modify Subscription</target>
+      </trans-unit>
+      <trans-unit id="NIWwOE_" resname="Abonnements">
+        <source>Abonnements</source>
+        <target>Subscriptions</target>
+      </trans-unit>
+      <trans-unit id="7kZagBc" resname="Acceuil">
+        <source>Acceuil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="cBPqocK" resname="Abonnement">
+        <source>Abonnement</source>
+        <target>Subscription</target>
+      </trans-unit>
+      <trans-unit id="tEb_R1a" resname="votre abonnement">
+        <source>votre abonnement</source>
+        <target>your subscription</target>
+      </trans-unit>
+      <trans-unit id="2U4a4ke" resname="Date &amp; Heure Debut">
+        <source>Date &amp; Heure Debut</source>
+        <target><![CDATA[Start Date & Time]]></target>
+      </trans-unit>
+      <trans-unit id="2bKpLKV" resname="Date &amp; Heure Fin">
+        <source>Date &amp; Heure Fin</source>
+        <target><![CDATA[End Date & Time]]></target>
+      </trans-unit>
+      <trans-unit id="JpWIzkR" resname="Mensuel">
+        <source>Mensuel</source>
+        <target>Monthly</target>
+      </trans-unit>
+      <trans-unit id="XsD7LQp" resname="Trimestriel">
+        <source>Trimestriel</source>
+        <target>Quarterly</target>
+      </trans-unit>
+      <trans-unit id="ov6OmZ4" resname="Annuel">
+        <source>Annuel</source>
+        <target>Annual</target>
+      </trans-unit>
+      <trans-unit id="uq3fcPt" resname="Type">
+        <source>Type</source>
+        <target>Type</target>
+      </trans-unit>
+      <trans-unit id="rSYoerZ" resname="Actif">
+        <source>Actif</source>
+        <target>Active</target>
+      </trans-unit>
+      <trans-unit id=".xKZhPS" resname="Suspendu">
+        <source>Suspendu</source>
+        <target>Suspended</target>
+      </trans-unit>
+      <trans-unit id="RHnvMXl" resname="Expiré">
+        <source>Expiré</source>
+        <target>Expired</target>
+      </trans-unit>
+      <trans-unit id="3uN3z9j" resname="Statut">
+        <source>Statut</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="QuN2BLY" resname="Modifier">
+        <source>Modifier</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="Rq05Fva" resname="Annuler">
+        <source>Annuler</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="PPICR0Z" resname="Compte Administrateur">
+        <source>Compte Administrateur</source>
+        <target>Administrator Account</target>
+      </trans-unit>
+      <trans-unit id="oZ6f9SM" resname="Abonnements de SanarLav">
+        <source>Abonnements de SanarLav</source>
+        <target>SanarLav Subscriptions</target>
+      </trans-unit>
+      <trans-unit id="Tf9651Q" resname="Listes des abonnements">
+        <source>Listes des abonnements</source>
+        <target>Subscription Lists</target>
+      </trans-unit>
+      <trans-unit id="7GcNkIs" resname="Date de debut">
+        <source>Date de debut</source>
+        <target>Start Date</target>
+      </trans-unit>
+      <trans-unit id="sTSqvuA" resname="Date de fin">
+        <source>Date de fin</source>
+        <target>End Date</target>
+      </trans-unit>
+      <trans-unit id="DHf_Cas" resname="Client">
+        <source>Client</source>
+        <target>Client</target>
+      </trans-unit>
+      <trans-unit id="VMMk9sE" resname="Prix">
+        <source>Prix</source>
+        <target>Price</target>
+      </trans-unit>
+      <trans-unit id="VAH_Z9P" resname="Date de création">
+        <source>Date de création</source>
+        <target>Creation Date</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="Sh6EfsR" resname="Voir">
+        <source>Voir</source>
+        <target>View</target>
+      </trans-unit>
+      <trans-unit id="IumSuye" resname="Editer">
+        <source>Editer</source>
+        <target>Edit</target>
+      </trans-unit>
+      <trans-unit id="x.b7JKF" resname="Pas d'abonnements présents deans la base">
+        <source>Pas d'abonnements présents deans la base</source>
+        <target>No subscriptions found in the database</target>
+      </trans-unit>
+      <trans-unit id="31vyEqQ" resname="Nouveau abonnement">
+        <source>Nouveau abonnement</source>
+        <target>New subscription</target>
+      </trans-unit>
+      <trans-unit id="2s1HYZp" resname="Compte">
+        <source>Compte</source>
+        <target>Account</target>
+      </trans-unit>
+      <trans-unit id="00ZIjaG" resname="Abonnement de">
+        <source>Abonnement de</source>
+        <target>Subscription of</target>
+      </trans-unit>
+      <trans-unit id="bMWtLkf" resname="Type:">
+        <source>Type:</source>
+        <target>Type:</target>
+      </trans-unit>
+      <trans-unit id="OzCbdBZ" resname="Statut:">
+        <source>Statut:</source>
+        <target>Status:</target>
+      </trans-unit>
+      <trans-unit id="jbjt9mX" resname="Prix:">
+        <source>Prix:</source>
+        <target>Price:</target>
+      </trans-unit>
+      <trans-unit id="uIbOIjD" resname="Client:">
+        <source>Client:</source>
+        <target>Client:</target>
+      </trans-unit>
+      <trans-unit id="ciZnGJV" resname="Date de Création:">
+        <source>Date de Création:</source>
+        <target>Creation Date:</target>
+      </trans-unit>
+      <trans-unit id=".WG6Fdv" resname="Date de mise à jour:">
+        <source>Date de mise à jour:</source>
+        <target>Last Update Date:</target>
+      </trans-unit>
+      <trans-unit id="Xl0CFs4" resname="Supprimer">
+        <source>Supprimer</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="lpQY9NW" resname="Créer">
+        <source>Créer</source>
+        <target>Create</target>
+      </trans-unit>
+      <trans-unit id="ZyFT62v" resname="A propos">
+        <source>A propos</source>
+        <target>About</target>
+      </trans-unit>
+      <trans-unit id="Zm5JHYN" resname="A propos de Nous">
+        <source>A propos de Nous</source>
+        <target>About Us</target>
+      </trans-unit>
+      <trans-unit id="fPMmoyW" resname="Bienvenue sur">
+        <source>Bienvenue sur</source>
+        <target>Welcome to</target>
+      </trans-unit>
+      <trans-unit id="itORY6e" resname="Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.">
+        <source>Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.</source>
+        <target>We offer a practical and fast solution to meet the cleaning needs of clothes, household linens, and other textile items.</target>
+      </trans-unit>
+      <trans-unit id="jJgDn0v" resname="Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.">
+        <source>Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.</source>
+        <target>Our mission is to simplify the lives of our customers by providing them with high-quality laundry services, along with fast and reliable service. We understand the importance of clean clothes and textiles in daily life, whether for professional, personal, or maintaining optimal hygiene.</target>
+      </trans-unit>
+      <trans-unit id="DcatH4R" resname="Ans">
+        <source>Ans</source>
+        <target>Years</target>
+      </trans-unit>
+      <trans-unit id="Zo_7mLg" resname="d'Experiences">
+        <source>d'Experiences</source>
+        <target>Experiences</target>
+      </trans-unit>
+      <trans-unit id="kx52uN9" resname="Partenaires">
+        <source>Partenaires</source>
+        <target>Partners</target>
+      </trans-unit>
+      <trans-unit id="0J1fyZg" resname="De confiance">
+        <source>De confiance</source>
+        <target>Trustworthy</target>
+      </trans-unit>
+      <trans-unit id="usdCMuU" resname="Lire plus">
+        <source>Lire plus</source>
+        <target>Read more</target>
+      </trans-unit>
+      <trans-unit id="vTB1yJF" resname="Membres de la Team">
+        <source>Membres de la Team</source>
+        <target>Team Members</target>
+      </trans-unit>
+      <trans-unit id="TRUTfQg" resname="Chefs de Service">
+        <source>Chefs de Service</source>
+        <target>Service Managers</target>
+      </trans-unit>
+      <trans-unit id="kwFB2fS" resname="Directeur technique">
+        <source>Directeur technique</source>
+        <target>Technical Director</target>
+      </trans-unit>
+      <trans-unit id="iRswI76" resname="Directrice commerciale">
+        <source>Directrice commerciale</source>
+        <target>Commercial Director</target>
+      </trans-unit>
+      <trans-unit id="Cr95PgO" resname="Responsable informatique">
+        <source>Responsable informatique</source>
+        <target>IT Manager</target>
+      </trans-unit>
+      <trans-unit id="QIy7_pA" resname="Supérviseur général">
+        <source>Supérviseur général</source>
+        <target>General Supervisor</target>
+      </trans-unit>
+      <trans-unit id="MUGK5iV" resname="Témoignages">
+        <source>Témoignages</source>
+        <target>Testimonials</target>
+      </trans-unit>
+      <trans-unit id="BdnOcx9" resname="Nos clients disent !!!">
+        <source>Nos clients disent !!!</source>
+        <target>Our clients say !!!</target>
+      </trans-unit>
+      <trans-unit id="x18kvuo" resname="Eleveur">
+        <source>Eleveur</source>
+        <target>Farmer</target>
+      </trans-unit>
+      <trans-unit id="fe7DFbY" resname="Sécrétaire">
+        <source>Sécrétaire</source>
+        <target>Secretary</target>
+      </trans-unit>
+      <trans-unit id="aImjff4" resname="Enseignant">
+        <source>Enseignant</source>
+        <target>Teacher</target>
+      </trans-unit>
+      <trans-unit id="iptuAP6" resname="Infirmière">
+        <source>Infirmière</source>
+        <target>Nurse</target>
+      </trans-unit>
+      <trans-unit id="Dvf5y03" resname="Se deconnecter">
+        <source>Se deconnecter</source>
+        <target>Log Out</target>
+      </trans-unit>
+      <trans-unit id="VhJP71F" resname="DASHBOARD">
+        <source>DASHBOARD</source>
+        <target>DASHBOARD</target>
+      </trans-unit>
+      <trans-unit id="I9OTi17" resname="Utilisateurs">
+        <source>Utilisateurs</source>
+        <target>Users</target>
+      </trans-unit>
+      <trans-unit id="PlE2.Us" resname="Transactions">
+        <source>Transactions</source>
+        <target>Transactions</target>
+      </trans-unit>
+      <trans-unit id="aYPieVO" resname="Paiements">
+        <source>Paiements</source>
+        <target>Payments</target>
+      </trans-unit>
+      <trans-unit id="DjEYoku" resname="Commandes">
+        <source>Commandes</source>
+        <target>Orders</target>
+      </trans-unit>
+      <trans-unit id="KSTrV76" resname="Réclamations">
+        <source>Réclamations</source>
+        <target>Complaints</target>
+      </trans-unit>
+      <trans-unit id="tFBkXev" resname="Contacts">
+        <source>Contacts</source>
+        <target>Contacts</target>
+      </trans-unit>
+      <trans-unit id="ro0bXMz" resname="Tableau de Bord">
+        <source>Tableau de Bord</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="MrsxEk7" resname="Nombre d'utilisateurs">
+        <source>Nombre d'utilisateurs</source>
+        <target>Number of users</target>
+      </trans-unit>
+      <trans-unit id=".be4HqU" resname="Nombre de commandes">
+        <source>Nombre de commandes</source>
+        <target>Number of orders</target>
+      </trans-unit>
+      <trans-unit id="Zli4rYS" resname="Nombre de transactions">
+        <source>Nombre de transactions</source>
+        <target>Number of transactions</target>
+      </trans-unit>
+      <trans-unit id="5CFveOu" resname="Nombre de réclammations">
+        <source>Nombre de réclammations</source>
+        <target>Number of complaints</target>
+      </trans-unit>
+      <trans-unit id="v5EmZ4o" resname="Messages récents">
+        <source>Messages récents</source>
+        <target>Recent messages</target>
+      </trans-unit>
+      <trans-unit id="_v4oeGi" resname="Avis important">
+        <source>Avis important</source>
+        <target>Important notice</target>
+      </trans-unit>
+      <trans-unit id="Vp0LmEa" resname="Voir plus de détails">
+        <source>Voir plus de détails</source>
+        <target>View more details</target>
+      </trans-unit>
+      <trans-unit id="6PtB6VF" resname="Liste des derniers clients inscrits">
+        <source>Liste des derniers clients inscrits</source>
+        <target>List of recent registered clients</target>
+      </trans-unit>
+      <trans-unit id="t8_nMCO" resname="Prenom">
+        <source>Prenom</source>
+        <target>First Name</target>
+      </trans-unit>
+      <trans-unit id="ssEkU20" resname="Nom">
+        <source>Nom</source>
+        <target>Last Name</target>
+      </trans-unit>
+      <trans-unit id="lpzL089" resname="Email">
+        <source>Email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="eeXPIN4" resname="Adresse">
+        <source>Adresse</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="inUlsUk" resname="Notes">
+        <source>Notes</source>
+        <target>Notes</target>
+      </trans-unit>
+      <trans-unit id="8_uDiHg" resname="Pour clients">
+        <source>Pour clients</source>
+        <target>For clients</target>
+      </trans-unit>
+      <trans-unit id="b2Y_Cim" resname="Pour employés">
+        <source>Pour employés</source>
+        <target>For employees</target>
+      </trans-unit>
+      <trans-unit id="jGRgz3G" resname="Brouillon">
+        <source>Brouillon</source>
+        <target>Draft</target>
+      </trans-unit>
+      <trans-unit id="AZI996R" resname="Paramètres">
+        <source>Paramètres</source>
+        <target>Settings</target>
+      </trans-unit>
+      <trans-unit id="wCUx9sP" resname="Barre de progression">
+        <source>Barre de progression</source>
+        <target>Progress Bar</target>
+      </trans-unit>
+      <trans-unit id="EWFfngW" resname="Message pour les gérants">
+        <source>Message pour les gérants</source>
+        <target>Message for Managers</target>
+      </trans-unit>
+      <trans-unit id="21nrsnI" resname="Sujet">
+        <source>Sujet</source>
+        <target>Subject</target>
+      </trans-unit>
+      <trans-unit id="L3dmip3" resname="Message">
+        <source>Message</source>
+        <target>Message</target>
+      </trans-unit>
+      <trans-unit id="J2SEzT." resname="Envoyer Message">
+        <source>Envoyer Message</source>
+        <target>Send Message</target>
+      </trans-unit>
+      <trans-unit id="5HUNqZ8" resname="Effacer">
+        <source>Effacer</source>
+        <target>Clear</target>
+      </trans-unit>
+      <trans-unit id="YE3ORF4" resname="Services">
+        <source>Services</source>
+        <target>Services</target>
+      </trans-unit>
+      <trans-unit id="QSvguc1" resname="Informations">
+        <source>Informations</source>
+        <target>Information</target>
+      </trans-unit>
+      <trans-unit id="jGvAmVN" resname="Blog">
+        <source>Blog</source>
+        <target>Blog</target>
+      </trans-unit>
+      <trans-unit id="28RooUt" resname="FAQ">
+        <source>FAQ</source>
+        <target>FAQ</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="KPRXHyi" resname="Mon compte">
+        <source>Mon compte</source>
+        <target>My Account</target>
+      </trans-unit>
+      <trans-unit id="wNF0L.K" resname="Compagnie">
+        <source>Compagnie</source>
+        <target>Company</target>
+      </trans-unit>
+      <trans-unit id="JOY_pRX" resname="Contactez Nous">
+        <source>Contactez Nous</source>
+        <target>Contact Us</target>
+      </trans-unit>
+      <trans-unit id="tFbm1a5" resname="Reservation">
+        <source>Reservation</source>
+        <target>Reservation</target>
+      </trans-unit>
+      <trans-unit id="_HO33Mj" resname="Politique de confidentialité">
+        <source>Politique de confidentialité</source>
+        <target>Privacy Policy</target>
+      </trans-unit>
+      <trans-unit id="ZjKVAVX" resname="Termes &amp; Conditions">
+        <source>Termes &amp; Conditions</source>
+        <target>Terms &amp; Conditions</target>
+      </trans-unit>
+      <trans-unit id="O.MCFAt" resname="Ouverture">
+        <source>Ouverture</source>
+        <target>Opening Hours</target>
+      </trans-unit>
+      <trans-unit id="rFJE0Uq" resname="Lundi - Samedi">
+        <source>Lundi - Samedi</source>
+        <target>Monday - Saturday</target>
+      </trans-unit>
+      <trans-unit id="Q0eMwYP" resname="10H - 22H">
+        <source>10H - 22H</source>
+        <target>10AM - 10PM</target>
+      </trans-unit>
+      <trans-unit id="KBOxyrT" resname="Dimanche">
+        <source>Dimanche</source>
+        <target>Sunday</target>
+      </trans-unit>
+      <trans-unit id="g_S2tbm" resname="12H - 20H">
+        <source>12H - 20H</source>
+        <target>12PM - 8PM</target>
+      </trans-unit>
+      <trans-unit id="_Eyi53F" resname="Newsletter">
+        <source>Newsletter</source>
+        <target>Newsletter</target>
+      </trans-unit>
+      <trans-unit id="MiQk1Bj" resname="Connectez vous à nos newsletters pour voir nos informations et nos éventuelles opportinités.">
+        <source>Connectez vous à nos newsletters pour voir nos informations et nos éventuelles opportunités.</source>
+        <target>Subscribe to our newsletters to receive our information and any potential opportunities.</target>
+      </trans-unit>
+      <trans-unit id="PCX0_17" resname="S'inscrire">
+        <source>S'inscrire</source>
+        <target>Sign Up</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="FBOV6zV" resname="Cookies">
+        <source>Cookies</source>
+        <target>Cookies</target>
+      </trans-unit>
+      <trans-unit id="t5yskm4" resname="Help">
+        <source>Help</source>
+        <target>Help</target>
+      </trans-unit>
+      <trans-unit id="hESAoZq" resname="FQAs">
+        <source>FQAs</source>
+        <target>FAQs</target>
+      </trans-unit>
+      <trans-unit id="2iiN0qP" resname="Actualités">
+        <source>Actualités</source>
+        <target>News</target>
+      </trans-unit>
+      <trans-unit id="VoXQAhc" resname="Ressources populaires">
+        <source>Ressources populaires</source>
+        <target>Popular Resources</target>
+      </trans-unit>
+      <trans-unit id="ljKCjTy" resname="Modification Commande">
+        <source>Modification Commande</source>
+        <target>Order Modification</target>
+      </trans-unit>
+      <trans-unit id="MpZaPDy" resname="Demandes">
+        <source>Demandes</source>
+        <target>Requests</target>
+      </trans-unit>
+      <trans-unit id="TUfiQJt" resname="votre commande">
+        <source>votre commande</source>
+        <target>Your Order</target>
+      </trans-unit>
+      <trans-unit id="rk6PwOX" resname="Date &amp; Heure">
+        <source>Date &amp; Heure</source>
+        <target>Date &amp; Time</target>
+      </trans-unit>
+      <trans-unit id="KdlJIlE" resname="Article">
+        <source>Article</source>
+        <target>Article</target>
+      </trans-unit>
+      <trans-unit id="ar3AZXX" resname="Non réglé">
+        <source>Non réglé</source>
+        <target>Unresolved</target>
+      </trans-unit>
+      <trans-unit id="N14e06." resname="En traitement">
+        <source>En traitement</source>
+        <target>In Progress</target>
+      </trans-unit>
+      <trans-unit id="7GO1ZB7" resname="Réglé">
+        <source>Réglé</source>
+        <target>Resolved</target>
+      </trans-unit>
+      <trans-unit id="yUIIr_j" resname="Listes des commandes">
+        <source>Listes des commandes</source>
+        <target>Order Lists</target>
+      </trans-unit>
+      <trans-unit id="mcQKtAW" resname="Date">
+        <source>Date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="SQ1mkwj" resname="Date de mise à jour">
+        <source>Date de mise à jour</source>
+        <target>Last Updated Date</target>
+      </trans-unit>
+      <trans-unit id="RgmgFEO" resname="Pas de commandes présents deans la base">
+        <source>Pas de commandes présents deans la base</source>
+        <target>No orders found in the database</target>
+      </trans-unit>
+      <trans-unit id="6W0D8SS" resname="Nouvelle commande">
+        <source>Nouvelle commande</source>
+        <target>New Order</target>
+      </trans-unit>
+      <trans-unit id="HbxlzO1" resname="Commande">
+        <source>Commande</source>
+        <target>Order</target>
+      </trans-unit>
+      <trans-unit id="YBssJHO" resname="du">
+        <source>du</source>
+        <target>of</target>
+      </trans-unit>
+      <trans-unit id="B9lYTfj" resname="Date de création:">
+        <source>Date de création:</source>
+        <target>Creation Date:</target>
+      </trans-unit>
+      <trans-unit id="EsD8DcB" resname="Créer ma commande">
+        <source>Créer ma commande</source>
+        <target>Create my order</target>
+      </trans-unit>
+      <trans-unit id="PyNOpfQ" resname="Mes affaires">
+        <source>Mes affaires</source>
+        <target>My Business</target>
+      </trans-unit>
+      <trans-unit id="h8DEg6I" resname="Mes actions sur">
+        <source>Mes actions sur</source>
+        <target>My Actions on</target>
+      </trans-unit>
+      <trans-unit id="M7s7iTM" resname="Mes demandes">
+        <source>Mes demandes</source>
+        <target>My Requests</target>
+      </trans-unit>
+      <trans-unit id="PjIkzEZ" resname="Mes retours">
+        <source>Mes retours</source>
+        <target>My Returns</target>
+      </trans-unit>
+      <trans-unit id="2OA6qw0" resname="Réclammations">
+        <source>Réclammations</source>
+        <target>Complaints</target>
+      </trans-unit>
+      <trans-unit id="rc2XEYT" resname="Mes transactions">
+        <source>Mes transactions</source>
+        <target>My Transactions</target>
+      </trans-unit>
+      <trans-unit id="s8q_vvU" resname="Paiements &amp; Abonnement">
+        <source>Paiements &amp; Abonnement</source>
+        <target>Payments &amp; Subscription</target>
+      </trans-unit>
+      <trans-unit id="ek.xdJ0" resname="Faire une commande">
+        <source>Faire une commande</source>
+        <target>Place an Order</target>
+      </trans-unit>
+      <trans-unit id="At2E885" resname="Aucune commande">
+        <source>Aucune commande</source>
+        <target>No orders</target>
+      </trans-unit>
+      <trans-unit id="0OuczSJ" resname="Commande -">
+        <source>Commande -</source>
+        <target>Order -</target>
+      </trans-unit>
+      <trans-unit id="d0JoJAq" resname="Faire une réclamation">
+        <source>Faire une réclamation</source>
+        <target>Make a Complaint</target>
+      </trans-unit>
+      <trans-unit id="6Kt919." resname="Aucune réclamation">
+        <source>Aucune réclamation</source>
+        <target>No complaints</target>
+      </trans-unit>
+      <trans-unit id="KriRb7f" resname="Réclamation -">
+        <source>Réclamation -</source>
+        <target>Complaint -</target>
+      </trans-unit>
+      <trans-unit id="TjkT0y0" resname="Prendre un abonnement">
+        <source>Prendre un abonnement</source>
+        <target>Subscribe</target>
+      </trans-unit>
+      <trans-unit id="tNHmBT3" resname="Aucune transaction">
+        <source>Aucune transaction</source>
+        <target>No transactions</target>
+      </trans-unit>
+      <trans-unit id="EUiIpgv" resname="Transaction -">
+        <source>Transaction -</source>
+        <target>Transaction -</target>
+      </trans-unit>
+      <trans-unit id="uDYgklU" resname="Mes abonnements">
+        <source>Mes abonnements</source>
+        <target>My Subscriptions</target>
+      </trans-unit>
+      <trans-unit id="cX4TNvt" resname="Aucun abonnement">
+        <source>Aucun abonnement</source>
+        <target>No subscriptions</target>
+      </trans-unit>
+      <trans-unit id="rF4TXJe" resname="Contactez nous">
+        <source>Contactez nous</source>
+        <target>Contact Us</target>
+      </trans-unit>
+      <trans-unit id="BWMnHyi" resname="Contactez nous pour une quelconque demande">
+        <source>Contactez nous pour une quelconque demande</source>
+        <target>Contact us for any inquiries</target>
+      </trans-unit>
+      <trans-unit id="yRDUdNz" resname="General">
+        <source>General</source>
+        <target>General</target>
+      </trans-unit>
+      <trans-unit id="UM0kLlE" resname="Techno">
+        <source>Techno</source>
+        <target>Techno</target>
+      </trans-unit>
+      <trans-unit id="IJl71jQ" resname="Prenom &amp; Nom">
+        <source>Prenom &amp; Nom</source>
+        <target>First Name &amp; Last Name</target>
+      </trans-unit>
+      <trans-unit id="jrhz0oP" resname="Envoyez message">
+        <source>Envoyez message</source>
+        <target>Send Message</target>
+      </trans-unit>
+      <trans-unit id="ct0zHfY" resname="Suppression de Contact">
+        <source>Suppression de Contact</source>
+        <target>Contact Deletion</target>
+      </trans-unit>
+      <trans-unit id="BTGR4J5" resname="Message envoyé">
+        <source>Message envoyé</source>
+        <target>Message sent</target>
+      </trans-unit>
+      <trans-unit id="mkqff85" resname="Nous vous contacterons si besoin. Merci !!!">
+        <source>Nous vous contacterons si besoin. Merci !!!</source>
+        <target>We will contact you if necessary. Thank you!</target>
+      </trans-unit>
+      <trans-unit id="U3qVbZ_" resname="Consultation">
+        <source>Consultation</source>
+        <target>Consultation</target>
+      </trans-unit>
+      <trans-unit id="4Y_T8tr" resname="Réclamations de">
+        <source>Réclamations de</source>
+        <target>Complaints from</target>
+      </trans-unit>
+      <trans-unit id="fLlp_OP" resname="Listes des réclammations">
+        <source>Listes des réclammations</source>
+        <target>Complaint List</target>
+      </trans-unit>
+      <trans-unit id="ZM.xMZ0" resname="Action">
+        <source>Action</source>
+        <target>Action</target>
+      </trans-unit>
+      <trans-unit id="eDRyCO." resname="Pas de réclammations présents deans la base">
+        <source>Pas de réclammations présents deans la base</source>
+        <target>No complaints found in the database</target>
+      </trans-unit>
+      <trans-unit id="d9QDGVq" resname="Bienvenue !!!">
+        <source>Bienvenue !!!</source>
+        <target>Welcome !!!</target>
+      </trans-unit>
+      <trans-unit id="0SY.0QO" resname="votre laverie express">
+        <source>votre laverie express</source>
+        <target>Your Express Laundry</target>
+      </trans-unit>
+      <trans-unit id="oWz3uDD" resname="Vos habits, sen yéré niou sett avec des tarifs spéciales pour vous. Nous sommes à votre disposition pour une plus grande sécurité avec vos habits.">
+        <source>Vos habits, sen yéré niou sett avec des tarifs spéciales pour vous. Nous sommes à votre disposition pour une plus grande sécurité avec vos habits.</source>
+        <target>Your clothes, always clean and at special rates for you. We are at your service for a greater safety with your clothes.</target>
+      </trans-unit>
+      <trans-unit id="yjrvvdo" resname="Nos tarifs">
+        <source>Nos tarifs</source>
+        <target>Our Prices</target>
+      </trans-unit>
+      <trans-unit id="Et3L8Qo" resname="Clientèle">
+        <source>Clientèle</source>
+        <target>Customer Base</target>
+      </trans-unit>
+      <trans-unit id="M6ko9Pq" resname="Dites nous ce que vous voulez et nous tâcherons de l'accomplir.">
+        <source>Dites nous ce que vous voulez et nous tâcherons de l'accomplir.</source>
+        <target>Tell us what you want and we will strive to accomplish it.</target>
+      </trans-unit>
+      <trans-unit id="GCdqIXr" resname="Qualité Service">
+        <source>Qualité Service</source>
+        <target>Service Quality</target>
+      </trans-unit>
+      <trans-unit id="KUF3eIQ" resname="Votre satisfaction fait notre joie et nous marchons dans cette joie.">
+        <source>Votre satisfaction fait notre joie et nous marchons dans cette joie.</source>
+        <target>Your satisfaction brings us joy, and we walk in that joy.</target>
+      </trans-unit>
+      <trans-unit id="5dMovyu" resname="Vos commandes sont traitées par ordre d'arrivée avec sécurité.">
+        <source>Vos commandes sont traitées par ordre d'arrivée avec sécurité.</source>
+        <target>Your orders are processed in the order they are received with safety measures.</target>
+      </trans-unit>
+      <trans-unit id="bdU90_D" resname="Service 24/7">
+        <source>Service 24/7</source>
+        <target>24/7 Service</target>
+      </trans-unit>
+      <trans-unit id="BAF45JM" resname="Nous sommes disponibles tous les jours de la semaine. Veuillez nous contacter.">
+        <source>Nous sommes disponibles tous les jours de la semaine. Veuillez nous contacter.</source>
+        <target>We are available every day of the week. Please contact us.</target>
+      </trans-unit>
+      <trans-unit id="1Ynt97D" resname="Tarification">
+        <source>Tarification</source>
+        <target>Pricing</target>
+      </trans-unit>
+      <trans-unit id="3HwA7Gy" resname="Poids des habits">
+        <source>Poids des habits</source>
+        <target>Weight of Clothes</target>
+      </trans-unit>
+      <trans-unit id="r3UMoX_" resname="Poids">
+        <source>Poids</source>
+        <target>Weight</target>
+      </trans-unit>
+      <trans-unit id="dWxPzP5" resname="Calculer prix">
+        <source>Calculer prix</source>
+        <target>Calculate price</target>
+      </trans-unit>
+      <trans-unit id="MjHvws6" resname="calculer poids">
+        <source>calculer poids</source>
+        <target>calculate weight</target>
+      </trans-unit>
+      <trans-unit id="t9KGMkf" resname="Interaction">
+        <source>Interaction</source>
+        <target>Interaction</target>
+      </trans-unit>
+      <trans-unit id="QxMJomq" resname="Parlez nous Ici">
+        <source>Parlez nous Ici</source>
+        <target>Talk to us Here</target>
+      </trans-unit>
+      <trans-unit id="LHFVhMT" resname="Prénom et Nom">
+        <source>Prénom et Nom</source>
+        <target>First Name and Last Name</target>
+      </trans-unit>
+      <trans-unit id="fTG4MxO" resname="Notification">
+        <source>Notification</source>
+        <target>Notification</target>
+      </trans-unit>
+      <trans-unit id="3RM55WY" resname="Temoignage">
+        <source>Temoignage</source>
+        <target>Testimonial</target>
+      </trans-unit>
+      <trans-unit id="8mck6TK" resname="Alerte">
+        <source>Alerte</source>
+        <target>Alert</target>
+      </trans-unit>
+      <trans-unit id="1Ko5ImD" resname="Recommandation">
+        <source>Recommandation</source>
+        <target>Recommendation</target>
+      </trans-unit>
+      <trans-unit id="M1tJTXG" resname="Souhait">
+        <source>Souhait</source>
+        <target>Wish</target>
+      </trans-unit>
+      <trans-unit id="55_hQd1" resname="Demande">
+        <source>Demande</source>
+        <target>Request</target>
+      </trans-unit>
+      <trans-unit id="7UuF44g" resname="Offre">
+        <source>Offre</source>
+        <target>Offer</target>
+      </trans-unit>
+      <trans-unit id="HoaL3qb" resname="Proposition">
+        <source>Proposition</source>
+        <target>Proposal</target>
+      </trans-unit>
+      <trans-unit id="QsWxU3W" resname="Demande spéciale">
+        <source>Demande spéciale</source>
+        <target>Special Request</target>
+      </trans-unit>
+      <trans-unit id="eQdSCfK" resname="Envoyer">
+        <source>Envoyer</source>
+        <target>Send</target>
+      </trans-unit>
+      <trans-unit id="rRrilvy" resname="Vidéo Youtube">
+        <source>Vidéo Youtube</source>
+        <target>YouTube Video</target>
+      </trans-unit>
+      <trans-unit id="muGltH5" resname="Compte employé">
+        <source>Compte employé</source>
+        <target>Employee Account</target>
+      </trans-unit>
+      <trans-unit id="0J2aHlR" resname="Compte Employé">
+        <source>Compte Employé</source>
+        <target>Employee Account</target>
+      </trans-unit>
+      <trans-unit id="XEtkOjm" resname="Gestion des clients">
+        <source>Gestion des clients</source>
+        <target>Customer Management</target>
+      </trans-unit>
+      <trans-unit id="CF54mC9" resname="Les affaires">
+        <source>Les affaires</source>
+        <target>Business</target>
+      </trans-unit>
+      <trans-unit id="bIqh4XG" resname="Les réalisations sur">
+        <source>Les réalisations sur</source>
+        <target>Accomplishments on</target>
+      </trans-unit>
+      <trans-unit id="HorwCAg" resname="Les demandes">
+        <source>Les demandes</source>
+        <target>Requests</target>
+      </trans-unit>
+      <trans-unit id="nIj0jpE" resname="Les retours">
+        <source>Les retours</source>
+        <target>Returns</target>
+      </trans-unit>
+      <trans-unit id="uPCrU0D" resname="Les transactions">
+        <source>Les transactions</source>
+        <target>Transactions</target>
+      </trans-unit>
+      <trans-unit id="AdynC37" resname="Aucune commande de clients">
+        <source>Aucune commande de clients</source>
+        <target>No customer orders</target>
+      </trans-unit>
+      <trans-unit id="eNbysZa" resname="Date mise à jour">
+        <source>Date mise à jour</source>
+        <target>Last Updated</target>
+      </trans-unit>
+      <trans-unit id="en43Y2f" resname="Aucune réclamation de clients">
+        <source>Aucune réclamation de clients</source>
+        <target>No customer complaints</target>
+      </trans-unit>
+      <trans-unit id="Um4Ah8w" resname="Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="ZJiVo2r" resname="Les transactions de clients">
+        <source>Les transactions de clients</source>
+        <target>Customer Transactions</target>
+      </trans-unit>
+      <trans-unit id="Zb79cx0" resname="Créer une transaction pour un client">
+        <source>Créer une transaction pour un client</source>
+        <target>Create a transaction for a customer</target>
+      </trans-unit>
+      <trans-unit id="01tyhZG" resname="Aucune transaction de clients">
+        <source>Aucune transaction de clients</source>
+        <target>No customer transactions</target>
+      </trans-unit>
+      <trans-unit id="cd9Vpak" resname="Modepaiement">
+        <source>Modepaiement</source>
+        <target>Payment Mode</target>
+      </trans-unit>
+      <trans-unit id="lHzAfis" resname="Montant">
+        <source>Montant</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="pHzpoNO" resname="Les abonnements des clients">
+        <source>Les abonnements des clients</source>
+        <target>Customer Subscriptions</target>
+      </trans-unit>
+      <trans-unit id="PgD.mzW" resname="Aucun abonnement de clients">
+        <source>Aucun abonnement de clients</source>
+        <target>No customer subscriptions</target>
+      </trans-unit>
+      <trans-unit id="KXY_v_j" resname="Les Interactions">
+        <source>Les Interactions</source>
+        <target>Interactions</target>
+      </trans-unit>
+      <trans-unit id="ItkuUm5" resname="Les échanges sur">
+        <source>Les échanges sur</source>
+        <target>Conversations on</target>
+      </trans-unit>
+      <trans-unit id="2puC6RI" resname="Les contacts">
+        <source>Les contacts</source>
+        <target>Contacts</target>
+      </trans-unit>
+      <trans-unit id="hx.Lnyd" resname="Messages &amp; Informations">
+        <source>Messages &amp; Informations</source>
+        <target>Messages &amp; Information</target>
+      </trans-unit>
+      <trans-unit id="yN8t30M" resname="Aucun message ou information de visiteurs">
+        <source>Aucun message ou information de visiteurs</source>
+        <target>No visitor messages or information</target>
+      </trans-unit>
+      <trans-unit id="u7C9X.V" resname="Texte">
+        <source>Texte</source>
+        <target>Text</target>
+      </trans-unit>
+      <trans-unit id="TJ1IUQS" resname="Gestion de mon compte">
+        <source>Gestion de mon compte</source>
+        <target>Manage My Account</target>
+      </trans-unit>
+      <trans-unit id="z7GsDIB" resname="Inscription">
+        <source>Inscription</source>
+        <target>Registration</target>
+      </trans-unit>
+      <trans-unit id="5p_FpZq" resname="Authentification">
+        <source>Authentification</source>
+        <target>Authentication</target>
+      </trans-unit>
+      <trans-unit id="7B_HX46" resname="Veuillez créer votre compte">
+        <source>Veuillez créer votre compte</source>
+        <target>Please create your account</target>
+      </trans-unit>
+      <trans-unit id="CoHTYmb" resname="Tel">
+        <source>Tel</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="_ti4bsb" resname="Mot de Passe">
+        <source>Mot de Passe</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="KaLJ3U0" resname="Confirmation mot de Passe">
+        <source>Confirmation mot de Passe</source>
+        <target>Password Confirmation</target>
+      </trans-unit>
+      <trans-unit id="LrS0wA2" resname="J'accepte les termes et conditions">
+        <source>J'accepte les termes et conditions</source>
+        <target>I accept the terms and conditions</target>
+      </trans-unit>
+      <trans-unit id="piivmAm" resname="Créer un compte">
+        <source>Créer un compte</source>
+        <target>Create an account</target>
+      </trans-unit>
+      <trans-unit id="dKJUgoN" resname="J'ai déja un compte">
+        <source>J'ai déja un compte</source>
+        <target>I already have an account</target>
+      </trans-unit>
+      <trans-unit id="lwxnIyr" resname="Modification Reparation">
+        <source>Modification Reparation</source>
+        <target>Repair Modification</target>
+      </trans-unit>
+      <trans-unit id="fEQuBZk" resname="Retours">
+        <source>Retours</source>
+        <target>Returns</target>
+      </trans-unit>
+      <trans-unit id="8oI53SB" resname="votre réclammation">
+        <source>votre réclammation</source>
+        <target>your complaint</target>
+      </trans-unit>
+      <trans-unit id="fQfO80b" resname="Nouvelle réclamation">
+        <source>Nouvelle réclamation</source>
+        <target>New complaint</target>
+      </trans-unit>
+      <trans-unit id="qwY2sXQ" resname="Réclamation">
+        <source>Réclamation</source>
+        <target>Complaint</target>
+      </trans-unit>
+      <trans-unit id="WdBzpmF" resname="Réclamation pour">
+        <source>Réclamation pour</source>
+        <target>Complaint for</target>
+      </trans-unit>
+      <trans-unit id="b0Z1QKs" resname="Soumettre">
+        <source>Soumettre</source>
+        <target>Submit</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="VH0F5Aa" resname="Veuillez vous connecter">
+        <source>Veuillez vous connecter</source>
+        <target>Please log in</target>
+      </trans-unit>
+      <trans-unit id="bKzB7f7" resname="Vous êtes connecté avec">
+        <source>Vous êtes connecté avec</source>
+        <target>You are logged in with</target>
+      </trans-unit>
+      <trans-unit id="DL02fX6" resname="Deconnexion">
+        <source>Deconnexion</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="CsPSyzA" resname="Se connecter">
+        <source>Se connecter</source>
+        <target>Sign in</target>
+      </trans-unit>
+      <trans-unit id="yrFEeRj" resname="Se souvenir de moi">
+        <source>Se souvenir de moi</source>
+        <target>Remember me</target>
+      </trans-unit>
+      <trans-unit id="DKKWVHA" resname="Nos services">
+        <source>Nos services</source>
+        <target>Our services</target>
+      </trans-unit>
+      <trans-unit id="dRhNNWf" resname="Explorez nos services">
+        <source>Explorez nos services</source>
+        <target>Explore our services</target>
+      </trans-unit>
+      <trans-unit id="1iOgaGD" resname="Lavage en libre-service">
+        <source>Lavage en libre-service</source>
+        <target>Self-Service Car Wash</target>
+      </trans-unit>
+      <trans-unit id="ym8jiyg" resname="Lavage à la demande">
+        <source>Lavage à la demande</source>
+        <target>On-Demand Car Wash</target>
+      </trans-unit>
+      <trans-unit id="fUHMawI" resname="Location de machines">
+        <source>Location de machines</source>
+        <target>Machine Rental</target>
+      </trans-unit>
+      <trans-unit id="B1Jwtq7" resname="Nous sommes disponibles tous les jours de la semaine.">
+        <source>Nous sommes disponibles tous les jours de la semaine.</source>
+        <target>We are available every day of the week.</target>
+      </trans-unit>
+      <trans-unit id="E_RhKuJ" resname="Sur nos services">
+        <source>Sur nos services</source>
+        <target>About our services</target>
+      </trans-unit>
+      <trans-unit id="bv4Zxj2" resname="Fiabilité de nos services">
+        <source>Fiabilité de nos services</source>
+        <target>Reliability of our services</target>
+      </trans-unit>
+      <trans-unit id="cD8AR_6" resname="Modification Transaction">
+        <source>Modification Transaction</source>
+        <target>Transaction Modification</target>
+      </trans-unit>
+      <trans-unit id="7sJt3Zp" resname="Transaction">
+        <source>Transaction</source>
+        <target>Transaction</target>
+      </trans-unit>
+      <trans-unit id="LWrMebL" resname="Création de transactions pour un client">
+        <source>Création de transactions pour un client</source>
+        <target>Create transactions for a client</target>
+      </trans-unit>
+      <trans-unit id="ugcmOS2" resname="Mode de paiement">
+        <source>Mode de paiement</source>
+        <target>Payment method</target>
+      </trans-unit>
+      <trans-unit id="ZaclZUL" resname="Clients">
+        <source>Clients</source>
+        <target>Clients</target>
+      </trans-unit>
+      <trans-unit id="0tGEd7H" resname="Nouvelle Transaction">
+        <source>Nouvelle Transaction</source>
+        <target>New Transaction</target>
+      </trans-unit>
+      <trans-unit id="gdwHXD1" resname="transactions">
+        <source>transactions</source>
+        <target>transactions</target>
+      </trans-unit>
+      <trans-unit id="5BaY6ml" resname="transaction de la">
+        <source>transaction de la</source>
+        <target>transaction of</target>
+      </trans-unit>
+      <trans-unit id="7Sm87Me" resname="pour">
+        <source>pour</source>
+        <target>for</target>
+      </trans-unit>
+      <trans-unit id="tRSJvej" resname="Date:">
+        <source>Date:</source>
+        <target>Date:</target>
+      </trans-unit>
+      <trans-unit id="BdoBuC6" resname="Montant: :">
+        <source>Montant: :</source>
+        <target>Amount: :</target>
+      </trans-unit>
+      <trans-unit id="3al3yWt" resname="Mode de paiement:">
+        <source>Mode de paiement:</source>
+        <target>Payment method:</target>
+      </trans-unit>
+      <trans-unit id="SzB2Y._" resname="valider la transaction">
+        <source>valider la transaction</source>
+        <target>Validate transaction</target>
+      </trans-unit>
+      <trans-unit id="C4rP37E" resname="Utilisateurs de">
+        <source>Utilisateurs de</source>
+        <target>Users of</target>
+      </trans-unit>
+      <trans-unit id="MawR8FA" resname="Listes des utilisateurs">
+        <source>Listes des utilisateurs</source>
+        <target>User Lists</target>
+      </trans-unit>
+      <trans-unit id="hOzWMou" resname="Telephone">
+        <source>Telephone</source>
+        <target>Telephone</target>
+      </trans-unit>
+      <trans-unit id="rlajjSz" resname="Date de Création">
+        <source>Date de Création</source>
+        <target>Creation Date</target>
+      </trans-unit>
+      <trans-unit id="ZOJjDMf" resname="Pas d'utilisateurs présents deans la base">
+        <source>Pas d'utilisateurs présents deans la base</source>
+        <target>No users present in the database</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
