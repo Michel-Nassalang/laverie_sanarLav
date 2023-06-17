@@ -1,47 +1,68 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}Reparation index{% endblock %}
+{% block title %}Compte Administrateur
+{% endblock %}
 
 {% block body %}
-    <h1>Reparation index</h1>
+	<div class="row pad-botm">
+		<div class="col-md-12">
+			<h4 class="header-line">Réclamations de SanarLav</h4>
+		</div>
+	</div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Description</th>
-                <th>Statut</th>
-                <th>Prix</th>
-                <th>DateCreate</th>
-                <th>DateUpdate</th>
-                <th>DateDelete</th>
-                <th>Date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for reparation in reparations %}
-            <tr>
-                <td>{{ reparation.id }}</td>
-                <td>{{ reparation.description }}</td>
-                <td>{{ reparation.statut }}</td>
-                <td>{{ reparation.prix }}</td>
-                <td>{{ reparation.dateCreate ? reparation.dateCreate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ reparation.dateUpdate ? reparation.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ reparation.dateDelete ? reparation.dateDelete|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ reparation.date ? reparation.date|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('app_reparations_show', {'id': reparation.id}) }}">show</a>
-                    <a href="{{ path('app_reparations_edit', {'id': reparation.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<div class="row">
+		<div
+			class="col-md-12">
+			<!-- Advanced Tables -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Listes des réclammations
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Description</th>
+									<th>Commande</th>
+									<th>Client</th>
+									<th>Statut</th>
+									<th>Prix</th>
+									<th>Date</th>
+									<th>Date de mise à jour</th>
+									<th>actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for reparation in reparations %}
+									<tr>
+										<td>{{ reparation.id }}</td>
+										<td>{{ reparation.description }}</td>
+										<td>{{ reparation.commandeid}}</td>
+										<td>{{ reparation.userid }}</td>
+										<td>{{ reparation.statut }}</td>
+										<td>{{ reparation.prix }}</td>
+										<td>{{ reparation.date ? reparation.date|date('Y-m-d H:i:s') : '' }}</td>
+										<td>{{ reparation.dateUpdate ? reparation.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
+										<td>
+											<a href="{{ path('app_reparations_show', {'id': reparation.id}) }}">Voir</a>
+											<a href="{{ path('app_reparations_edit', {'id': reparation.id}) }}">Editer</a>
+										</td>
+									</tr>
+								{% else %}
+									<tr>
+										<td colspan="12">Pas de réclammations présents deans la base</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
 
-    <a href="{{ path('app_reparations_new') }}">Create new</a>
+				</div>
+			</div>
+			<!--End Advanced Tables -->
+		</div>
+	</div>
+
 {% endblock %}

@@ -37,8 +37,12 @@ security:
         # - { path: ^/, roles: PUBLIC_ACCESS }
         - { path: ^/admin, roles: ROLE_ADMIN }
         - { path: ^/employer, roles: ROLE_EMPLOYER }
-        # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/compte, roles: ROLE_CLIENT }
+        - { path: ^/abonnements/\d+/edit, roles: ROLE_EMPLOYER }
+        - { path: ^/commandes/\d+/edit, roles: ROLE_EMPLOYER }
+        - { path: ^/contacts/\d+/edit, roles: ROLE_EMPLOYER }
+        - { path: ^/reparations/\d+/edit, roles: ROLE_EMPLOYER }
+        - { path: ^/transaction/\d+/edit, roles: ROLE_EMPLOYER }
 
     role_hierarchy:
         ROLE_CLIENT: ROLE_USER

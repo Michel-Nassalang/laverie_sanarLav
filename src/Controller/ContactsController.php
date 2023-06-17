@@ -20,6 +20,14 @@ class ContactsController extends AbstractController
         ]);
     }
 
+    #[Route('/all', name: 'app_contacts_view', methods: ['GET'])]
+    public function view(ContactRepository $contactRepository): Response
+    {
+        return $this->render('contacts/view.html.twig', [
+            'contacts' => $contactRepository->findAll()
+        ]);
+    }
+
     #[Route('/{id}', name: 'app_contacts_show', methods: ['GET'])]
     public function show(Contact $contact): Response
     {

@@ -1,53 +1,58 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}User index{% endblock %}
+{% block title %}Compte Administrateur
+{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+	<div class="row pad-botm">
+		<div class="col-md-12">
+			<h4 class="header-line">Utilisateurs de SanarLav</h4>
+		</div>
+	</div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prenom</th>
-                <th>Email</th>
-                <th>Roles</th>
-                <th>Tel</th>
-                <th>Adresse</th>
-                <th>DateCreate</th>
-                <th>DateUpdate</th>
-                <th>DateDelete</th>
-                <th>Password</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for user in users %}
-            <tr>
-                <td>{{ user.id }}</td>
-                <td>{{ user.nom }}</td>
-                <td>{{ user.prenom }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
-                <td>{{ user.tel }}</td>
-                <td>{{ user.adresse }}</td>
-                <td>{{ user.dateCreate ? user.dateCreate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ user.dateUpdate ? user.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ user.dateDelete ? user.dateDelete|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ user.password }}</td>
-                <td>
-                    <a href="{{ path('app_user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('app_user_edit', {'id': user.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="12">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+	<div class="row">
+		<div
+			class="col-md-12">
+			<!-- Advanced Tables -->
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					Listes des utilisateurs
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+							<thead>
+								<tr>
+									<th>Prenom</th>
+									<th>Nom</th>
+									<th>Email</th>
+									<th>Telephone</th>
+									<th>Adresse</th>
+									<th>Date de Création</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for user in users %}
+									<tr class="gradeA">
+										<td>{{user.prenom}}</td>
+										<td>{{user.nom}}</td>
+										<td>{{user.email}}</td>
+										<td class="center">{{user.tel}}</td>
+										<td class="center">{{user.adresse}}</td>
+										<td class="center">{{user.datecreate |date('d/m/Y H:i:s')}}</td>
+									</tr>
+								{% else %}
+									<tr>
+										<td colspan="12">Pas d'utilisateurs présents deans la base</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
 
-    <a href="{{ path('app_user_new') }}">Create new</a>
+				</div>
+			</div>
+			<!--End Advanced Tables -->
+		</div>
+	</div>
 {% endblock %}

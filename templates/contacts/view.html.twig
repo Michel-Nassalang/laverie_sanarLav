@@ -6,7 +6,7 @@
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Abonnements de SanarLav</h4>
+			<h4 class="header-line">Réclamations de SanarLav</h4>
 		</div>
 	</div>
 
@@ -16,40 +16,38 @@
 			<!-- Advanced Tables -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Listes des commandes
+					Listes des réclammations
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 							<thead>
-
 								<tr>
 									<th>#</th>
+									<th>Sujet</th>
+									<th>Message</th>
+									<th>Email</th>
+									<th>Nom</th>
 									<th>Date</th>
-									<th>Article</th>
-									<th>Client</th>
-									<th>Statut</th>
-									<th>Date de mise à jour</th>
-									<th>actions</th>
+									<th>Action</th>
 								</tr>
 							</thead>
 							<tbody>
-								{% for commande in commandes %}
+								{% for contact in contacts %}
 									<tr>
-										<td>{{ commande.id }}</td>
-										<td>{{ commande.date ? commande.date|date('Y-m-d H:i:s') : '' }}</td>
-										<td>{{ commande.articleid }}</td>
-										<td>{{ commande.clientid}}</td>
-										<td>{{ commande.statut }}</td>
-										<td>{{ commande.dateUpdate ? commande.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
+										<td>{{ contact.id }}</td>
+										<td>{{ contact.sujet }}</td>
+										<td>{{ contact.texte}}</td>
+										<td>{{ contact.email }}</td>
+										<td>{{ contact.nom }}</td>
+										<td>{{ contact.date ? contact.date|date('Y-m-d H:i:s') : '' }}</td>
 										<td>
-											<a href="{{ path('app_commandes_show', {'id': commande.id}) }}">Voir</a>
-											<a href="{{ path('app_commandes_edit', {'id': commande.id}) }}">Editer</a>
+											<a href="{{ path('app_contacts_show', {'id': contact.id}) }}">Voir</a>
 										</td>
 									</tr>
 								{% else %}
 									<tr>
-										<td colspan="12">Pas de commandes présents deans la base</td>
+										<td colspan="12">Pas de réclammations présents deans la base</td>
 									</tr>
 								{% endfor %}
 							</tbody>
@@ -63,3 +61,4 @@
 	</div>
 
 {% endblock %}
+

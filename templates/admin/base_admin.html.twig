@@ -10,6 +10,7 @@
 		{% block styles %}
 			<!-- Template Stylesheet -->
 			<link href="{{ asset('assets/admin/css/bootstrap.css') }}" rel="stylesheet">
+			<link href="{{ asset('assets/admin/js/dataTables/dataTables.bootstrap.css') }}" rel="stylesheet">
 			<link href="{{ asset('assets/admin/css/font-awesome.css') }}" rel="stylesheet">
 			<link href="{{ asset('assets/admin/css/style.css') }}" rel="stylesheet">
 			
@@ -58,7 +59,7 @@
 								</li>
 
 								<li>
-									<a href="">Utilisateurs</a>
+									<a href="/user">Utilisateurs</a>
 								</li>
 								<li>
 									<a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">Transactions
@@ -66,21 +67,21 @@
 									</a>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
 										<li role="presentation">
-											<a role="menuitem" tabindex="-1" href="">Paiements</a>
+											<a role="menuitem" tabindex="-1" href="/transaction">Paiements</a>
 										</li>
 										<li role="presentation">
-											<a role="menuitem" tabindex="-1" href="">Abonnements</a>
+											<a role="menuitem" tabindex="-1" href="/abonnements">Abonnements</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="">Commandes</a>
+									<a href="/commandes">Commandes</a>
 								</li>
 								<li>
-									<a href="">Réclammations</a>
+									<a href="/reparations">Réclammations</a>
 								</li>
 								<li>
-									<a href="">Contacts</a>
+									<a href="/contacts/all">Contacts</a>
 								</li>
 
 							</ul>
@@ -105,8 +106,8 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								&copy; 2014 Yourdomain.com |<a href="http://www.binarytheme.com/" target="_blank">
-									Designed by : binarytheme.com</a>
+								&copy; 2023 SanarLav |<a href="" target="_blank">
+									Designed by : Samath & Michel_Mkdir</a>
 							</div>
 
 						</div>
@@ -117,8 +118,10 @@
 
 			{% block scripts %}
 				<!-- Template Javascript -->
-			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+				<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 				<script src="{{ asset('assets/admin/js/bootstrap.js') }}"></script>
+    			<script src="{{ asset('assets/admin/js/dataTables/jquery.dataTables.js') }}"></script>
+    			<script src="{{ asset('assets/admin/js/dataTables/dataTables.bootstrap.js') }}"></script>
 				<script src="{{ asset('assets/admin/js/custom.js') }}"></script>
 			{% endblock %}
 		</body>

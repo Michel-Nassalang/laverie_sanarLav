@@ -88,46 +88,31 @@
 					Messages récents
 				</div>
 				<div class="panel-body chat-widget-main">
-					<div class="chat-widget-left">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																									                                Lorem ipsum dolor.
-					</div>
-					<div class="chat-widget-name-left">
-						<h4>
-							Amanna Seiar</h4>
-						<h5>Time 2:00 pm at 25th july</h5>
-					</div>
-					<hr/>
-					<div class="chat-widget-right">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																									                                Lorem ipsum dolor sit amet.
-					</div>
-					<div class="chat-widget-name-right">
-						<h4>
-							Amanna Seiar</h4>
-						<h5>Time 2:00 pm at 25th july</h5>
-					</div>
-					<hr/>
-					<div class="chat-widget-left">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																									                                Lorem ipsum dolor sit amet.
-					</div>
-					<div class="chat-widget-name-left">
-						<h4>
-							Amanna Seiar</h4>
-						<h5>Time 2:00 pm at 25th july</h5>
-					</div>
-					<hr/>
-					<div class="chat-widget-right">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-																																									                                Lorem ipsum dolor sit amet.
-					</div>
-					<div class="chat-widget-name-right">
-						<h4>
-							Amanna Seiar</h4>
-						<h5>Time 2:00 pm at 25th july</h5>
-					</div>
-					<hr/>
+					{% for contact in contactslimit %}
+						{% if loop.index % 2 == 0 %}
+							<div class="chat-widget-left">
+								{{contact.sujet}} : 
+								{{ contact.texte}}
+							</div>
+							<div class="chat-widget-name-left">
+								<h4>{{contact.nom}}</h4>
+								<h5>{{ contact.datecreate | date('d-m-Y H:i:s') }}
+								</h5>
+							</div>
+							<hr/>
+						{% else %}
+							<div class="chat-widget-right">
+								{{contact.sujet}} :
+								{{ contact.texte}}
+							</div>
+							<div class="chat-widget-name-right">
+								<h4>{{contact.nom}}</h4>
+								<h5>{{ contact.datecreate | date('d-m-Y H:i:s') }}
+								</h5>
+							</div>
+							<hr/>
+						{% endif %}
+					{% endfor %}
 				</div>
 			</div>
 		</div>
@@ -142,9 +127,9 @@
 				<i class="fa fa-warning fa-4x"></i>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
-					Lorem ipsum dolor sit amet.
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
+																				Lorem ipsum dolor sit amet, consectetur adipiscing elit gthn.
+																				Lorem ipsum dolor sit amet.
 				</p>
 				<hr/>
 				<a href="" class="btn btn-info">Voir plus de détails</a>
@@ -168,55 +153,15 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Mark</td>
-									<td>Otto</td>
-									<td>@mdo</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>Larry</td>
-									<td>the Bird</td>
-									<td>@twitter</td>
-									<td>100090</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>Jacob</td>
-									<td>Thornton</td>
-									<td>@fat</td>
-									<td>100090</td>
-								</tr>
+								{% for user in userslimit %}
+									<tr>
+										<td>{{user.id}}</td>
+										<td>{{user.prenom}}</td>
+										<td>{{user.nom}}</td>
+										<td>{{user.email}}</td>
+										<td>{{user.adresse}}</td>
+									</tr>
+								{% endfor %}
 							</tbody>
 						</table>
 					</div>
