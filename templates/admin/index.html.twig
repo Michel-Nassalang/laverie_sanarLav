@@ -1,12 +1,12 @@
 {% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}Compte Administrateur
+{% block title %}{% trans %}Compte Administrateur{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Tableau de Bord</h4>
+			<h4 class="header-line">{% trans %}Tableau de Bord{% endtrans %}</h4>
 
 		</div>
 
@@ -19,21 +19,21 @@
 				<i class="fa fa-user fa-5x"></i>
 				<h3>{{lusers}}
 				</h3>
-				Nombre d'utilisateurs
+				{% trans %}Nombre d'utilisateurs{% endtrans %}
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-6">
 			<div class="alert alert-success back-widget-set text-center">
 				<i class="fa fa-shopping-cart fa-5x"></i>
 				<h3>{{lcommandes}}</h3>
-				Nombre de commandes
+				{% trans %}Nombre de commandes{% endtrans %}
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-6">
 			<div class="alert alert-warning back-widget-set text-center">
 				<i class="fa fa-credit-card fa-5x"></i>
 				<h3>{{ltrans}}</h3>
-				Nombre de transactions
+				{% trans %}Nombre de transactions{% endtrans %}
 			</div>
 		</div>
 		<div class="col-md-3 col-sm-3 col-xs-6">
@@ -41,7 +41,7 @@
 				<i class="fa fa-gavel fa-5x"></i>
 				<h3>{{lreparations}}
 				</h3>
-				Nombre de réclammations
+				{% trans %}Nombre de réclammations{% endtrans %}
 			</div>
 		</div>
 
@@ -85,7 +85,7 @@
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div class="panel panel-primary ">
 				<div class="panel-heading">
-					Messages récents
+					{% trans %}Messages récents{% endtrans %}
 				</div>
 				<div class="panel-body chat-widget-main">
 					{% for contact in contactslimit %}
@@ -122,7 +122,7 @@
 		<div class="col-md-4 col-sm-4 col-xs-12">
 			<div class="alert alert-info text-center">
 				<h3>
-					Avis important</h3>
+					{% trans %}Avis important{% endtrans %}</h3>
 				<hr/>
 				<i class="fa fa-warning fa-4x"></i>
 				<p>
@@ -132,13 +132,13 @@
 																				Lorem ipsum dolor sit amet.
 				</p>
 				<hr/>
-				<a href="" class="btn btn-info">Voir plus de détails</a>
+				<a href="" class="btn btn-info">Voir plus de détails{% endtrans %}</a>
 			</div>
 		</div>
 		<div class="col-md-8 col-sm-8 col-xs-12">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					Liste des derniers clients inscrits
+					{% trans %}Liste des derniers clients inscrits{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -146,10 +146,10 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Prenom</th>
-									<th>Nom</th>
-									<th>Email</th>
-									<th>Adresse</th>
+									<th>{% trans %}Prenom{% endtrans %}</th>
+									<th>{% trans %}Nom{% endtrans %}</th>
+									<th>{% trans %}Email{% endtrans %}</th>
+									<th>{% trans %}Adresse{% endtrans %}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -173,39 +173,39 @@
 		<div class="col-md-6 col-sm-6">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Notes
+					{% trans %}Notes{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<ul class="nav nav-tabs">
 						<li class="active">
-							<a href="#client" data-toggle="tab">Pour clients</a>
+							<a href="#client" data-toggle="tab">{% trans %}Pour clients{% endtrans %}</a>
 						</li>
 						<li class="">
-							<a href="#employer" data-toggle="tab">Pour employés</a>
+							<a href="#employer" data-toggle="tab">{% trans %}Pour employés{% endtrans %}</a>
 						</li>
 						<li class="">
-							<a href="#brouillon" data-toggle="tab">Brouillon</a>
+							<a href="#brouillon" data-toggle="tab">{% trans %}Brouillon{% endtrans %}</a>
 						</li>
 						<li class="">
-							<a href="#settings" data-toggle="tab">Paramètres</a>
+							<a href="#settings" data-toggle="tab">{% trans %}Paramètres{% endtrans %}</a>
 						</li>
 					</ul>
 
 					<div class="tab-content">
 						<div class="tab-pane fade active in" id="client">
-							<h4>Pour clients</h4>
+							<h4>{% trans %}Pour clients{% endtrans %}</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 						<div class="tab-pane fade" id="employer">
-							<h4>Pour employés</h4>
+							<h4>{% trans %}Pour employés{% endtrans %}</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 						<div class="tab-pane fade" id="brouillon">
-							<h4>Brouillon</h4>
+							<h4>{% trans %}Brouillon{% endtrans %}</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 						<div class="tab-pane fade" id="settings">
-							<h4>Paramètres</h4>
+							<h4>{% trans %}Paramètres{% endtrans %}</h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 					</div>
@@ -213,7 +213,7 @@
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Barre de progression
+					{% trans %}Barre de progression{% endtrans %}
 				</div>
 
 				<div class="panel-body">
@@ -244,31 +244,31 @@
 		<div class="col-md-6 row">
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					Message pour les gérants
+					{% trans %}Message pour les gérants{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<form role="form">
 						<div class="form-group">
-							<label>Nom</label>
+							<label>{% trans %}Nom{% endtrans %}</label>
 							<input class="form-control" type="text"/>
 						</div>
 						<div class="form-group">
-							<label>Email</label>
+							<label>{% trans %}Email{% endtrans %}</label>
 							<input class="form-control" type="text"/>
 						</div>
 						<div class="form-group">
-							<label>Sujet</label>
+							<label>{% trans %}Sujet{% endtrans %}</label>
 							<input class="form-control" type="text"/>
 						</div>
 						<div class="form-group">
-							<label>Message</label>
+							<label>{% trans %}Message{% endtrans %}</label>
 							<input class="form-control" type="text" style="min-height:100px;"/>
 						</div>
 
 
-						<button type="submit" class="btn btn-success">Envoyer Message
+						<button type="submit" class="btn btn-success">{% trans %}Envoyer Message{% endtrans %}
 						</button>
-						<button type="reset" class="btn btn-primary">Effacer</button>
+						<button type="reset" class="btn btn-primary">{% trans %}Effacer{% endtrans %}</button>
 
 					</form>
 				</div>

@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Reparation
+{% block title %}{% trans %}Réclamation{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Compte</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Compte{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
 							{{app.user.nom}}</li>
 					{% endif %}
-					<li class="breadcrumb-item text-white active" aria-current="page">Réclamations</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}Réclamations{% endtrans %}</li>
 				</ol>
 				{% if app.user %}
 					<p class="">{{app.user.email}}</p>
@@ -31,16 +31,16 @@
 
 	<div class="container">
 		<div class="col-lg-10">
-			<h5 class="section-title ff-secondary text-start text-primary fw-normal">Réclamations
+			<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Réclamations{% endtrans %}
 				<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h5>
-			<h1 class="mb-4">Réclamation pour
+			<h1 class="mb-4">{% trans %}Réclamation pour{% endtrans %}
 				{{ reparation.date ? reparation.date|date('Y-m-d H:i:s') : 'une date non définie' }}</h1>
 			<p class="mb-4">{{reparation.description ? reparation.description : "Réclamation non définie"}}</p>
 			<div class="row g-4 mb-4">
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 						<div class="ps-4">
-							<p class="mb-0">Prix:
+							<p class="mb-0">{% trans %}Prix:
 							</p>
 							<h6 class="fw-normal mb-0 ff-secondary">{{ reparation.prix ? reparation.prix : "Non défini" }}</h6>
 						</div>
@@ -49,7 +49,7 @@
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 						<div class="ps-4">
-							<p class="mb-0">Statut:
+							<p class="mb-0">{% trans %}Statut:{% endtrans %}
 							</p>
 							<h6 class="mb-0 ff-secondary">{{ reparation.statut }}</h6>
 						</div>
@@ -59,7 +59,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Client:
+								<p class="mb-0">{% trans %}Client:{% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ reparation.userid }}</h6>
 							</div>
@@ -68,7 +68,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Date de Création:
+								<p class="mb-0">{% trans %}Date de Création:{% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ reparation.datecreate ? reparation.datecreate|date('Y-m-d H:i:s') : 'Non défini' }}</h6>
 							</div>
@@ -77,7 +77,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Date de mise à jour:
+								<p class="mb-0">{% trans %}Date de mise à jour:{% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ reparation.dateupdate ? abonnement.dateupdate|date('Y-m-d H:i:s') : 'Non défini' }}</h6>
 							</div>

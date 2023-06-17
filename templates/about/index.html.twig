@@ -1,18 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}A propos
+{% block title %}{% trans %}A propos{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header mb-5">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">A propos</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}A propos{% endtrans %}</h1>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
-					<li class="breadcrumb-item text-white active" aria-current="page">A propos</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}A propos{% endtrans %}</li>
 				</ol>
 			</nav>
 		</div>
@@ -39,20 +39,20 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<h5 class="section-title ff-secondary text-start text-primary fw-normal">A propos de Nous</h5>
-					<h1 class="mb-4">Bienvenue sur SanarLav
+					<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}A propos de Nous{% endtrans %}</h5>
+					<h1 class="mb-4">{% trans %}Bienvenue sur{% endtrans %} SanarLav
 						<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h1>
-					<p class="mb-4">Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.
+					<p class="mb-4">{% trans %}Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.{% endtrans %}
 					</p>
-					<p class="mb-4">Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.</p>
+					<p class="mb-4">{% trans %}Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.{% endtrans %}</p>
 					<div class="row g-4 mb-4">
 						<div class="col-sm-6">
 							<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 								<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">5</h1>
 								<div class="ps-4">
-									<p class="mb-0">Ans
+									<p class="mb-0">{% trans %}Ans{% endtrans %}
 									</p>
-									<h6 class="text-uppercase mb-0">d'Experiences</h6>
+									<h6 class="text-uppercase mb-0">{% trans %}d'Experiences{% endtrans %}</h6>
 								</div>
 							</div>
 						</div>
@@ -60,13 +60,13 @@
 							<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 								<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">14</h1>
 								<div class="ps-4">
-									<p class="mb-0">Partenaires</p>
-									<h6 class="text-uppercase mb-0">De confiance</h6>
+									<p class="mb-0">{% trans %}Partenaires{% endtrans %}</p>
+									<h6 class="text-uppercase mb-0">{% trans %}De confiance{% endtrans %}</h6>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a class="btn btn-primary py-3 px-5 mt-2" href="">Lire plus</a>
+					<a class="btn btn-primary py-3 px-5 mt-2" href="">{% trans %}Lire plus{% endtrans %}</a>
 				</div>
 			</div>
 		</div>
@@ -77,8 +77,8 @@
 	<div class="container-xxl pt-5 pb-3">
 		<div class="container">
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Membres de la Team</h5>
-				<h1 class="mb-5">Chefs de Service</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Membres de la Team{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Chefs de Service{% endtrans %}</h1>
 			</div>
 			<div class="row g-4">
 				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -87,7 +87,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-1.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Ousmane Diop</h5>
-						<small>Directeur technique</small>
+						<small>{% trans %}Directeur technique{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-2">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -107,7 +107,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-2.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Aissatou Sarr</h5>
-						<small>Directrice commerciale</small>
+						<small>{% trans %}Directrice commerciale{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -127,7 +127,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-3.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Michel Nassalang</h5>
-						<small>Responsable informatique</small>
+						<small>{% trans %}Responsable informatique{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -147,7 +147,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-4.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Abdou Samath Seck</h5>
-						<small>Supérviseur général</small>
+						<small>{% trans %}Supérviseur général{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -170,8 +170,8 @@
 	<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
 		<div class="container">
 			<div class="text-center">
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Témoignages</h5>
-				<h1 class="mb-5">Nos clients disent !!!</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Témoignages{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Nos clients disent !!!{% endtrans %}</h1>
 			</div>
 			<div class="owl-carousel testimonial-carousel">
 				<div class="testimonial-item bg-transparent border rounded p-4">
@@ -181,7 +181,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-1.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Abdel Daouda Diongue</h5>
-							<small>Eleveur</small>
+							<small>{% trans %}Eleveur{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -192,7 +192,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-2.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Naomi Rachel Faye</h5>
-							<small>Sécrétaire</small>
+							<small>{% trans %}Sécrétaire{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -203,7 +203,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-3.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Mouhamed Lamine Cissé</h5>
-							<small>Enseignant</small>
+							<small>{% trans %}Enseignant{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -214,7 +214,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-4.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Ndeye Fanta Mbaye</h5>
-							<small>Infirmière</small>
+							<small>{% trans %}Infirmière{% endtrans %}</small>
 						</div>
 					</div>
 				</div>

@@ -9,11 +9,11 @@
 		<div class="container my-5 py-5">
 			<div class="row align-items-center g-5">
 				<div class="col-lg-6 text-center text-lg-start">
-					<h1 class="display-3 text-white animated slideInLeft">Bienvenue !!!<br>SanarLav, votre laverie express</h1>
+					<h1 class="display-3 text-white animated slideInLeft">{% trans %}Bienvenue !!!{% endtrans %}<br>SanarLav, {% trans %}votre laverie express{% endtrans %}</h1>
 
 					<p class="text-white animated slideInLeft mb-4 pb-2">
-						Vos habits, sen yéré niou sett avec des tarifs spéciales pour vous. Nous sommes à votre disposition pour une plus grande sécurité avec vos habits.</p>
-					<a onclick="versTarif()" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Nos tarifs</a>
+						{% trans %}Vos habits, sen yéré niou sett avec des tarifs spéciales pour vous. Nous sommes à votre disposition pour une plus grande sécurité avec vos habits.{% endtrans %}</p>
+					<a onclick="versTarif()" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">{% trans %}Nos tarifs{% endtrans %}</a>
 				</div>
 				<div class="col-lg-6 text-center text-lg-end overflow-hidden">
 					<img class="img-fluid" src="{{ asset('assets/img/hero.png') }}" alt="">
@@ -30,8 +30,8 @@
 					<div class="service-item rounded pt-3">
 						<div class="p-4">
 							<i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
-							<h5>Clientèle</h5>
-							<p>Dites nous ce que vous voulez et nous tâcherons de l'accomplir.</p>
+							<h5>{% trans %}Clientèle{% endtrans %}</h5>
+							<p>{% trans %}Dites nous ce que vous voulez et nous tâcherons de l'accomplir.{% endtrans %}</p>
 						</div>
 					</div>
 				</div>
@@ -39,8 +39,8 @@
 					<div class="service-item rounded pt-3">
 						<div class="p-4">
 							<i class="fa fa-3x fa-handshake text-primary mb-4"></i>
-							<h5>Qualité Service</h5>
-							<p>Votre satisfaction fait notre joie et nous marchons dans cette joie.</p>
+							<h5>{% trans %}Qualité Service</h5>
+							<p>{% trans %}Votre satisfaction fait notre joie et nous marchons dans cette joie.{% endtrans %}</p>
 						</div>
 					</div>
 				</div>
@@ -48,8 +48,8 @@
 					<div class="service-item rounded pt-3">
 						<div class="p-4">
 							<i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
-							<h5>Commandes</h5>
-							<p>Vos commandes sont traitées par ordre d'arrivée avec sécurité.</p>
+							<h5>{% trans %}Commandes{% endtrans %}</h5>
+							<p>{% trans %}Vos commandes sont traitées par ordre d'arrivée avec sécurité.{% endtrans %}</p>
 						</div>
 					</div>
 				</div>
@@ -57,8 +57,8 @@
 					<div class="service-item rounded pt-3">
 						<div class="p-4">
 							<i class="fa fa-3x fa-headset text-primary mb-4"></i>
-							<h5>Service 24/7</h5>
-							<p>Nous sommes disponibles tous les jours de la semaine. Veuillez nous contacter.</p>
+							<h5>{% trans %}Service 24/7{% endtrans %}</h5>
+							<p>{% trans %}Nous sommes disponibles tous les jours de la semaine. Veuillez nous contacter.{% endtrans %}</p>
 						</div>
 					</div>
 				</div>
@@ -88,20 +88,20 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<h5 class="section-title ff-secondary text-start text-primary fw-normal">A propos de Nous</h5>
-					<h1 class="mb-4">Bienvenue sur SanarLav
+					<h5 class="section-title ff-secondary text-start text-primary fw-normal">A propos de Nous{% endtrans %}</h5>
+					<h1 class="mb-4">{% trans %}Bienvenue sur{% endtrans %} SanarLav
 						<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h1>
-					<p class="mb-4">Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.
+					<p class="mb-4">{% trans %}Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.{% endtrans %}
 					</p>
-					<p class="mb-4">Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.</p>
+					<p class="mb-4">{% trans %}Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.{% endtrans %}</p>
 					<div class="row g-4 mb-4">
 						<div class="col-sm-6">
 							<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 								<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">5</h1>
 								<div class="ps-4">
-									<p class="mb-0">Ans
+									<p class="mb-0">{% trans %}Ans{% endtrans %}
 									</p>
-									<h6 class="text-uppercase mb-0">d'Experiences</h6>
+									<h6 class="text-uppercase mb-0">{% trans %}d'Experiences{% endtrans %}</h6>
 								</div>
 							</div>
 						</div>
@@ -109,13 +109,13 @@
 							<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 								<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">14</h1>
 								<div class="ps-4">
-									<p class="mb-0">Partenaires</p>
-									<h6 class="text-uppercase mb-0">De confiance</h6>
+									<p class="mb-0">{% trans %}Partenaires{% endtrans %}</p>
+									<h6 class="text-uppercase mb-0">{% trans %}De confiance{% endtrans %}</h6>
 								</div>
 							</div>
 						</div>
 					</div>
-					<a class="btn btn-primary py-3 px-5 mt-2" href="">Lire plus</a>
+					<a class="btn btn-primary py-3 px-5 mt-2" href="">{% trans %}Lire plus{% endtrans %}</a>
 				</div>
 			</div>
 		</div>
@@ -127,25 +127,25 @@
 		<div class="row g-0">
 			<div class="col-md-6 bg-dark d-flex align-items-center">
 				<div class="p-5 col-12 wow fadeInUp" data-wow-delay="0.2s">
-					<h5 class="section-title ff-secondary text-start text-primary fw-normal">Tarification</h5>
-					<h1 class="text-white mb-4">Poids des habits</h1>
+					<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Tarification{% endtrans %}</h5>
+					<h1 class="text-white mb-4">{% trans %}Poids des habits{% endtrans %}</h1>
 					<div class="row g-3">
 						<div class="col-md-12">
 							<div class="form-floating">
 								<input type="text" class="form-control" id="nbpoids" placeholder="Poids des habits">
-								<label for="nbpoids">Poids</label>
+								<label for="nbpoids">{% trans %}Poids{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="col-6">
-							<button class="btn btn-primary w-100 py-3" onclick="calculpoids()">Calculer prix</button>
+							<button class="btn btn-primary w-100 py-3" onclick="calculpoids()">{% trans %}Calculer prix{% endtrans %}</button>
 						</div>
 						<div class="col-6">
-							<button class="btn btn-primary w-100 py-3" onclick="calculprix()">calculer poids</button>
+							<button class="btn btn-primary w-100 py-3" onclick="calculprix()">{% trans %}calculer poids{% endtrans %}</button>
 						</div>
 						<div class="col-md-12">
 							<div class="form-floating">
 								<input type="text" class="form-control" id="nbprix" placeholder=" ... FCFA">
-								<label for="nbprix">Prix (FCFA)</label>
+								<label for="nbprix">{% trans %}Prix{% endtrans %} (FCFA)</label>
 							</div>
 						</div>
 					</div>
@@ -175,51 +175,51 @@
 			</div>
 			<div class="col-md-6 bg-dark d-flex align-items-center">
 				<div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
-					<h5 class="section-title ff-secondary text-start text-primary fw-normal">Interaction</h5>
-					<h1 class="text-white mb-4">Parlez nous Ici</h1>
+					<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Interaction{% endtrans %}</h5>
+					<h1 class="text-white mb-4">{% trans %}Parlez nous Ici{% endtrans %}</h1>
 					{{ form_start(form) }}
 						<div class="row g-3">
 							<div class="col-md-6">
 								<div class="form-floating">
 									<input type="text" name="{{ field_name(form.nom) }}" class="form-control" id="name" placeholder="Nom complet">
-									<label for="name">Prénom et Nom</label>
+									<label for="name">{% trans %}Prénom et Nom{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-floating">
 									<input type="email" name="{{ field_name(form.email) }}" class="form-control" id="email" placeholder="Adresse Email">
-									<label for="email">Email</label>
+									<label for="email">{% trans %}Email{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-floating date" id="date3" data-target-input="nearest">
 									<input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Heure" data-target="#date3" data-toggle="datetimepicker"/>
-									<label for="datetime">Date & Heure</label>
+									<label for="datetime">{% trans %}Date & Heure{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-floating">
 									<select class="form-select" name="{{ field_name(form.sujet) }}" id="select1">
-										<option value="Notification">Notification</option>
-										<option value="Temoignage">Temoignage</option>
-										<option value="Alerte">Alerte</option>
-										<option value="Recommandation">Recommandation</option>
-										<option value="Souhait">Souhait</option>
-										<option value="Demande">Demande</option>
-										<option value="Offre">Offre</option>
-										<option value="Proposition">Proposition</option>
+										<option value="Notification">{% trans %}Notification{% endtrans %}</option>
+										<option value="Temoignage">{% trans %}Temoignage{% endtrans %}</option>
+										<option value="Alerte">{% trans %}Alerte{% endtrans %}</option>
+										<option value="Recommandation">{% trans %}Recommandation{% endtrans %}</option>
+										<option value="Souhait">{% trans %}Souhait{% endtrans %}</option>
+										<option value="Demande">{% trans %}Demande{% endtrans %}</option>
+										<option value="Offre">{% trans %}Offre{% endtrans %}</option>
+										<option value="Proposition">{% trans %}Proposition{% endtrans %}</option>
 									</select>
-									<label for="select1">Sujet</label>
+									<label for="select1">{% trans %}Sujet{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-12">
 								<div class="form-floating">
 									<textarea class="form-control" name="{{ field_name(form.texte) }}" placeholder="Demande" id="message" style="height: 100px"></textarea>
-									<label for="message">Demande spéciale</label>
+									<label for="message">{% trans %}Demande spéciale{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-12">
-								<button class="btn btn-primary w-100 py-3" type="submit">Envoyer</button>
+								<button class="btn btn-primary w-100 py-3" type="submit">{% trans %}Envoyer{% endtrans %}</button>
 							</div>
 						</div>
 					{{ form_end(form) }}
@@ -232,7 +232,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content rounded-0">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Vidéo Youtube</h5>
+					<h5 class="modal-title" id="exampleModalLabel">{% trans %}Vidéo Youtube{% endtrans %}</h5>
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div
@@ -252,8 +252,8 @@
 	<div class="container-xxl pt-5 pb-3">
 		<div class="container">
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Membres de la Team</h5>
-				<h1 class="mb-5">Chefs de Service</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Membres de la Team{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Chefs de Service{% endtrans %}</h1>
 			</div>
 			<div class="row g-4">
 				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -262,7 +262,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-1.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Ousmane Diop</h5>
-						<small>Directeur technique</small>
+						<small>{% trans %}Directeur technique{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-2">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -282,7 +282,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-2.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Aissatou Sarr</h5>
-						<small>Directrice commerciale</small>
+						<small>{% trans %}Directrice commerciale{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -302,7 +302,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-3.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Michel Nassalang</h5>
-						<small>Responsable informatique</small>
+						<small>{% trans %}Responsable informatique{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -322,7 +322,7 @@
 							<img class="img-fluid" src="{{ asset('assets/img/team-4.jpg') }}" alt="">
 						</div>
 						<h5 class="mb-0">Abdou Samath Seck</h5>
-						<small>Supérviseur général</small>
+						<small>{% trans %}Supérviseur général{% endtrans %}</small>
 						<div class="d-flex justify-content-center mt-3">
 							<a class="btn btn-square btn-primary mx-1" href="">
 								<i class="fab fa-facebook-f"></i>
@@ -346,8 +346,8 @@
 	<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
 		<div class="container">
 			<div class="text-center">
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Témoignages</h5>
-				<h1 class="mb-5">Nos clients disent !!!</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Témoignages{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Nos clients disent !!!{% endtrans %}</h1>
 			</div>
 			<div class="owl-carousel testimonial-carousel">
 				<div class="testimonial-item bg-transparent border rounded p-4">
@@ -357,7 +357,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-1.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Abdel Daouda Diongue</h5>
-							<small>Eleveur</small>
+							<small>{% trans %}Eleveur{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -368,7 +368,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-2.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Naomi Rachel Faye</h5>
-							<small>Sécrétaire</small>
+							<small>{% trans %}Sécrétaire{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -379,7 +379,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-3.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Mouhamed Lamine Cissé</h5>
-							<small>Enseignant</small>
+							<small>{% trans %}Enseignant{% endtrans %}</small>
 						</div>
 					</div>
 				</div>
@@ -390,7 +390,7 @@
 						<img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('assets/img/testimonial-4.jpg') }}" style="width: 50px; height: 50px;">
 						<div class="ps-3">
 							<h5 class="mb-1">Ndeye Fanta Mbaye</h5>
-							<small>Infirmière</small>
+							<small>{% trans %}Infirmière{% endtrans %}</small>
 						</div>
 					</div>
 				</div>

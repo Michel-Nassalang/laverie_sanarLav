@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Abonnement
+{% block title %}{% trans %}Abonnement{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Compte</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Compte{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
 							{{app.user.nom}}</li>
 					{% endif %}
-					<li class="breadcrumb-item text-white active" aria-current="page">Abonnement</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}Abonnement{% endtrans %}</li>
 				</ol>
 				{% if app.user %}
 					<p class="">{{app.user.email}}</p>
@@ -30,9 +30,9 @@
 
 	<div class="container">
 		<div class="col-lg-10">
-			<h5 class="section-title ff-secondary text-start text-primary fw-normal">Abonnements
+			<h5 class="section-title ff-secondary text-start text-primary fw-normal">Abonnements{% endtrans %}
 				<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h5>
-			<h1 class="mb-4">Abonnement de
+			<h1 class="mb-4">{% trans %}Abonnement de{% endtrans %}
 				{{ abonnement.datedebut ? abonnement.datedebut|date('Y-m-d') : '' }}
 				à
 				{{ abonnement.datefin ? abonnement.datefin|date('Y-m-d') : '' }}</h1>
@@ -40,7 +40,7 @@
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 						<div class="ps-4">
-							<p class="mb-0">Type:
+							<p class="mb-0">{% trans %}Type:{% endtrans %}
 							</p>
 							<h6 class="fw-normal mb-0 ff-secondary">{{ abonnement.type }}</h6>
 						</div>
@@ -49,7 +49,7 @@
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 						<div class="ps-4">
-							<p class="mb-0">Statut:
+							<p class="mb-0">{% trans %}Statut:{% endtrans %}
 							</p>
 							<h6 class="mb-0 ff-secondary">{{ abonnement.statut }}</h6>
 						</div>
@@ -58,7 +58,7 @@
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 						<div class="ps-4">
-							<p class="mb-0">Prix:
+							<p class="mb-0">{% trans %}Prix:{% endtrans %}
 							</p>
 							<h6 class="mb-0 ff-secondary">{{ abonnement.prix ? abonnement.prix : 'Non défini'}}</h6>
 						</div>
@@ -68,7 +68,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Client:
+								<p class="mb-0">{% trans %}Client:{% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ abonnement.clientid }}</h6>
 							</div>
@@ -77,7 +77,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Date de Création:
+								<p class="mb-0">{% trans %}Date de Création:{% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ abonnement.datecreate ? abonnement.datecreate|date('Y-m-d H:i:s') : 'Non défini' }}</h6>
 							</div>
@@ -86,7 +86,7 @@
 					<div class="col-sm-6">
 						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
 							<div class="ps-4">
-								<p class="mb-0">Date de mise à jour: 
+								<p class="mb-0">{% trans %}Date de mise à jour: {% endtrans %}
 								</p>
 								<h6 class="mb-0 ff-secondary">{{ abonnement.dateupdate ? abonnement.dateupdate|date('Y-m-d H:i:s') : 'Non défini' }}</h6>
 							</div>
@@ -98,38 +98,5 @@
 			{{ include('abonnements/_delete_form.html.twig') }}
 		</div>
 	</div>
-
-	{# <div class="container">
-			<div class="col-lg-10">
-				<h5 class="section-title ff-secondary text-start text-primary fw-normal">Abonnement <img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h5>
-				<h1 class="mb-4">Abonnement de {{ abonnement.datedebut ? abonnement.datedebut|date('Y-m-d') : '' }} à
-					{{ abonnement.datefin ? abonnement.datefin|date('Y-m-d') : '' }}</h1>
-				<p class="mb-4">Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d'autres articles textiles.
-				</p>
-				<p class="mb-4">Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l'importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.</p>
-				<div class="row g-4 mb-4">
-					<div class="col-sm-6">
-						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
-							<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">5</h1>
-							<div class="ps-4">
-								<p class="mb-0">Ans
-								</p>
-								<h6 class="text-uppercase mb-0">d'Experiences</h6>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-6">
-						<div class="d-flex align-items-center border-start border-5 border-primary px-3">
-							<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">14</h1>
-							<div class="ps-4">
-								<p class="mb-0">Partenaires</p>
-								<h6 class="text-uppercase mb-0">De confiance</h6>
-							</div>
-						</div>
-					</div>
-				</div>
-				<a class="btn btn-primary py-3 px-5 mt-2" href="">Lire plus</a>
-			</div>
-		</div> #}
 
 {% endblock %}

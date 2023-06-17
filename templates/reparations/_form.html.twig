@@ -8,8 +8,8 @@
 		</div>
 		<div class="col-lg-6 bg-dark d-flex align-items-center">
 			<div class="p-5 col-12 wow fadeInUp" data-wow-delay="0.2s">
-				<h5 class="section-title ff-secondary text-start text-primary fw-normal">Retours</h5>
-				<h1 class="text-white mb-4">votre réclammation</h1>
+				<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Retours{% endtrans %}</h5>
+				<h1 class="text-white mb-4">{% trans %}votre réclammation{% endtrans %}</h1>
 				<div class="row g-3">
 					{{ form_start(form) }}
 					{{ form_errors(form.date) }}
@@ -24,40 +24,40 @@
 									</option>
 								{% endfor %}
 							</select>
-							<label for="select2">Commande</label>
+							<label for="select2">{% trans %}Commande{% endtrans %}</label>
 						</div>
 					</div>
 					<div class="row justify-content-center align-items-center pb-3">
 						<div class="col-md-6">
 							<div class="form-floating date" id="date3" data-target-input="nearest">
 								<input type="text" class="form-control datetimepicker-input" name="{{ field_name(form.date) }}" id="datetime" placeholder="Date & Heure" data-target="#date3" data-toggle="datetimepicker"/>
-								<label for="datetime">Date & Heure</label>
+								<label for="datetime">{% trans %}Date & Heure{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-floating">
 								<select class="form-select" id="select1" name="{{ field_name(form.statut) }}">
-									<option value="Non réglé">Non réglé</option>
-									<option value="En traitement">En traitement</option>
-									<option value="Réglé">Réglé</option>
+									<option value="Non réglé">{% trans %}Non réglé{% endtrans %}</option>
+									<option value="En traitement">{% trans %}En traitement{% endtrans %}</option>
+									<option value="Réglé">{% trans %}Réglé{% endtrans %}</option>
 								</select>
-								<label for="select1">Statut</label>
+								<label for="select1">{% trans %}Statut{% endtrans %}</label>
 							</div>
 						</div>
 					</div>
 					<div class="col-12">
 						<div class="form-floating">
 							<textarea class="form-control" name="{{ field_name(form.description) }}" placeholder="Description" id="message" style="height: 100px"></textarea>
-							<label for="message">Description</label>
+							<label for="message">{% trans %}Description{% endtrans %}</label>
 						</div>
 					</div>
 
 					<div class="row justify-content-center align-items-center">
 						<div class="col-lg-6  py-3">
-							<button class="btn btn-primary w-100 py-3" type="submit">Soumettre</button>
+							<button class="btn btn-primary w-100 py-3" type="submit">{% trans %}Soumettre{% endtrans %}</button>
 						</div>
 						<div class="col-lg-6 text-center py-3">
-							<a href="/compte">Annuler</a>
+							<a href="/compte">{% trans %}Annuler{% endtrans %}</a>
 						</div>
 					</div>
 					{{ form_end(form) }}

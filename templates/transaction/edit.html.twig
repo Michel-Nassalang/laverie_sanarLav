@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modification Transaction
+{% block title %}{% trans %}Modification Transaction{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Transaction</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Transaction{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
 							{{app.user.nom}}</li>
 					{% endif %}
-					<li class="breadcrumb-item text-white active" aria-current="page">Transactions</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}Transactions{% endtrans %}</li>
 				</ol>
 				{% if app.user %}
 					<p class="">{{app.user.email}}</p>
@@ -33,8 +33,8 @@
 		<div class="row g-0">
 			<div class="col-lg-6 bg-dark d-flex align-items-center">
 				<div class="p-5 col-12 wow fadeInUp" data-wow-delay="0.2s">
-					<h5 class="section-title ff-secondary text-start text-primary fw-normal">Transaction</h5>
-					<h1 class="text-white mb-4">Création de transactions pour un client</h1>
+					<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Transaction{% endtrans %}</h5>
+					<h1 class="text-white mb-4">{% trans %}Création de transactions pour un client{% endtrans %}</h1>
 					<div class="row g-3">
 						{{ form_start(form) }}
 						{{ form_errors(form) }}
@@ -42,13 +42,13 @@
 							<div class="col-lg-6 my-3">
 								<div class="form-floating date" id="date5" data-target-input="nearest">
 									<input type="text" class="form-control" value="{{transaction.modepaiement}}" name="{{ field_name(form.modepaiement) }}" id="paiement" placeholder="Paiement"/>
-									<label for="modepaiement">Mode de paiement</label>
+									<label for="modepaiement">{% trans %}Mode de paiement{% endtrans %}</label>
 								</div>
 							</div>
 							<div class="col-lg-6 my-3">
 								<div class="form-floating date" id="date5" data-target-input="nearest">
 									<input type="number" value="{{transaction.montant}}" class="form-control" name="{{ field_name(form.montant) }}" id="montant" placeholder="Montant"/>
-									<label for="montant">Montant</label>
+									<label for="montant">{% trans %}Montant{% endtrans %}</label>
 								</div>
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 										</option>
 									{% endfor %}
 								</select>
-								<label for="select1">Commandes</label>
+								<label for="select1">{% trans %}Commandes{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="col-md-12 py-3">
@@ -73,15 +73,15 @@
 										</option>
 									{% endfor %}
 								</select>
-								<label for="select2">Clients</label>
+								<label for="select2">{% trans %}Clients{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="row justify-content-center align-items-center">
 							<div class="col-lg-6  py-3">
-								<button class="btn btn-primary w-100 py-3" type="submit">Modifier</button>
+								<button class="btn btn-primary w-100 py-3" type="submit">{% trans %}Modifier{% endtrans %}</button>
 							</div>
 							<div class="col-lg-6 text-center py-3">
-								<a href="/compte">Annuler</a>
+								<a href="/compte">{% trans %}Annuler{% endtrans %}</a>
 							</div>
 						</div>
 						{{ form_end(form) }}

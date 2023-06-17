@@ -1,25 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modification Abonnement
+{% block title %}{% trans %}Modification Abonnement{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Abonnements</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Abonnements{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
 							{{app.user.nom}}</li>
 					{% endif %}
-					<li class="breadcrumb-item text-white active" aria-current="page">Abonnement</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}Abonnement{% endtrans %}</li>
 				</ol>
 				{% if app.user %}
 					<p class="">{{app.user.email}}</p>
@@ -33,8 +33,8 @@
 	<div class="row g-0">
 		<div class="col-lg-6 bg-dark d-flex align-items-center">
 			<div class="p-5 col-12 wow fadeInUp" data-wow-delay="0.2s">
-				<h5 class="section-title ff-secondary text-start text-primary fw-normal">Abonnements</h5>
-				<h1 class="text-white mb-4">votre abonnement</h1>
+				<h5 class="section-title ff-secondary text-start text-primary fw-normal">{% trans %}Abonnements{% endtrans %}</h5>
+				<h1 class="text-white mb-4">{% trans %}votre abonnement{% endtrans %}</h1>
 				<div class="row g-3">
 					{{ form_start(form) }}
 					{{ form_errors(form.datedebut) }}
@@ -43,13 +43,13 @@
 						<div class="col-md-6">
 							<div class="form-floating date" id="date3" data-target-input="nearest">
 								<input type="text" class="form-control datetimepicker-input" value="{{abonnement.datedebut|date('d/m/Y H:m')}} AM" name="{{ field_name(form.datedebut) }}" id="datetime" placeholder="Date & Heure Debut" data-target="#date3" data-toggle="datetimepicker"/>
-								<label for="datetime">Date & Heure Debut</label>
+								<label for="datetime">{% trans %}Date & Heure Debut{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-floating date" id="date4" data-target-input="nearest">
 								<input type="text" class="form-control datetimepicker-input" value="{{abonnement.datefin|date('d/m/Y H:m')}} AM" name="{{ field_name(form.datefin) }}" id="datetime" placeholder="Date & Heure Fin" data-target="#date4" data-toggle="datetimepicker"/>
-								<label for="datetime">Date & Heure Fin</label>
+								<label for="datetime">{% trans %}Date & Heure Fin{% endtrans %}</label>
 							</div>
 						</div>
 					</div>
@@ -58,31 +58,31 @@
 							<div class="form-floating">
 								<select class="form-select" id="select1" name="{{ field_name(form.type) }}">
 									<option value="{{abonnement.type}}">{{abonnement.type}}</option>
-									<option value="Mensuel">Mensuel</option>
-									<option value="Trimestriel">Trimestriel</option>
-									<option value="Annuel">Annuel</option>
+									<option value="Mensuel">{% trans %}Mensuel{% endtrans %}</option>
+									<option value="Trimestriel">{% trans %}Trimestriel{% endtrans %}</option>
+									<option value="Annuel">{% trans %}Annuel{% endtrans %}</option>
 								</select>
-								<label for="select1">Type</label>
+								<label for="select1">{% trans %}Type{% endtrans %}</label>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-floating">
 								<select class="form-select" id="select1" name="{{ field_name(form.statut) }}">
 									<option value="{{abonnement.statut}}">{{abonnement.statut}}</option>
-									<option value="Actif">Actif</option>
-									<option value="Suspendu">Suspendu</option>
-									<option value="Expiré">Expiré</option>
+									<option value="Actif">{% trans %}Actif{% endtrans %}</option>
+									<option value="Suspendu">{% trans %}Suspendu{% endtrans %}</option>
+									<option value="Expiré">{% trans %}Expiré{% endtrans %}</option>
 								</select>
-								<label for="select1">Statut</label>
+								<label for="select1">{% trans %}Statut{% endtrans %}</label>
 							</div>
 						</div>
 					</div>
 					<div class="row justify-content-center align-items-center">
 						<div class="col-lg-6  py-3">
-							<button class="btn btn-primary w-100 py-3" type="submit">Modifier</button>
+							<button class="btn btn-primary w-100 py-3" type="submit">{% trans %}Modifier{% endtrans %}</button>
 						</div>
 						<div class="col-lg-6 text-center py-3">
-							<a href="/compte">Annuler</a>
+							<a href="/compte">{% trans %}Annuler{% endtrans %}</a>
 						</div>
 					</div>
 					{{ form_end(form) }}

@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Compte employé
+{% block title %}{% trans %}Compte employé{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header mb-5">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Compte Employé</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Compte Employé{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
@@ -32,10 +32,10 @@
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-				<h1 class="mb-4 text-primary border-bottom border-4 border-primary">Gestion des clients
+				<h1 class="mb-4 text-primary border-bottom border-4 border-primary">{% trans %}Gestion des clients{% endtrans %}
 					<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h1>
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Les affaires</h5>
-				<h1 class="mb-5">Les réalisations sur SanarLav</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Les affaires{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Les réalisations sur{% endtrans %} SanarLav</h1>
 			</div>
 			<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
 				<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -43,8 +43,8 @@
 						<a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
 							<i class="fa fa-shopping-basket fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Les demandes</small>
-								<h6 class="mt-n1 mb-0">Commandes</h6>
+								<small class="text-body">{% trans %}Les demandes{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Commandes{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -52,8 +52,8 @@
 						<a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
 							<i class="fa fa-gavel fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Les retours</small>
-								<h6 class="mt-n1 mb-0">Réclammations</h6>
+								<small class="text-body">{% trans %}Les retours{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Réclammations{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -61,8 +61,8 @@
 						<a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
 							<i class="fa fa-credit-card fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Les transactions</small>
-								<h6 class="mt-n1 mb-0">Paiements & Abonnement</h6>
+								<small class="text-body">{% trans %}Les transactions{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Paiements & Abonnement{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -73,19 +73,19 @@
 							{% if commandesClients is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune commande de clients</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucune commande de clients{% endtrans %}</h1>
 								</div>
 							{% else %}
 								<table>
 									<thead>
 										<tr class="align-items-center justify-content-center">
 											<th>Id</th>
-											<th>Date</th>
-											<th>Article</th>
-											<th>Statut</th>
-											<th>Client</th>
-											<th>Date mise à jour</th>
-											<th>actions</th>
+											<th>{% trans %}Date{% endtrans %}</th>
+											<th>{% trans %}Article{% endtrans %}</th>
+											<th>{% trans %}Statut{% endtrans %}</th>
+											<th>{% trans %}Client{% endtrans %}</th>
+											<th>{% trans %}Date mise à jour{% endtrans %}</th>
+											<th>{% trans %}actions{% endtrans %}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -99,8 +99,8 @@
 													{{ commandec.clientid.nom }}</td>
 												<td>{{ commandec.dateUpdate ? commandec.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
 												<td>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_commandes_show', {'id': commandec.id}) }}">Voir</a>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_commandes_edit', {'id': commandec.id}) }}">Editer</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_commandes_show', {'id': commandec.id}) }}">{% trans %}Voir{% endtrans %}</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_commandes_edit', {'id': commandec.id}) }}">{% trans %}Editer{% endtrans %}</a>
 													<a href="{{ path('app_commandes_delete', {'id': commandec.id}) }}">
 														<i class="fa fa-trash fa-1x text-primary"></i>
 													</a>
@@ -117,19 +117,19 @@
 							{% if reparationsClients is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-4.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune réclamation de clients</h1>
+									<h1 class="mb-5 text-secondary">{% endtrans %}Aucune réclamation de clients{% endtrans %}</h1>
 								</div>
 							{% else %}
 								<table>
 									<thead>
 										<tr>
 											<th>Id</th>
-											<th>Description</th>
-											<th>Statut</th>
-											<th>Prix</th>
-											<th>Client</th>
-											<th>Date</th>
-											<th>actions</th>
+											<th>{% endtrans %}Description{% endtrans %}</th>
+											<th>{% endtrans %}Statut{% endtrans %}</th>
+											<th>{% endtrans %}Prix{% endtrans %}</th>
+											<th>{% endtrans %}Client{% endtrans %}</th>
+											<th>{% endtrans %}Date{% endtrans %}</th>
+											<th>{% endtrans %}actions{% endtrans %}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -143,8 +143,8 @@
 													{{ reparationc.userid.nom }}</td>
 												<td>{{ reparationc.date ? reparationc.date|date('Y-m-d H:i:s') : '' }}</td>
 												<td>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_reparations_show', {'id': reparationc.id}) }}">Voir</a>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_reparations_edit', {'id': reparationc.id}) }}">Editer</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_reparations_show', {'id': reparationc.id}) }}">{% trans %}Voir{% endtrans %}</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_reparations_edit', {'id': reparationc.id}) }}">{% trans %}Editer{% endtrans %}</a>
 													<a href="{{ path('app_reparations_delete', {'id': reparationc.id}) }}">
 														<i class="fa fa-trash fa-1x text-primary"></i>
 													</a>
@@ -159,29 +159,29 @@
 					<div id="tab-3" class="tab-pane fade show p-0">
 						<div class="row g-4 justify-content-center">
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Les transactions de clients</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Les transactions de clients{% endtrans %}</h5>
 							</div>
 							{% if transactionsClients is empty %}
 								<div class="col-8 mb-3">
-									<a class="btn btn-primary w-100 py-3" href="/transaction/new">Créer une transaction pour un client</a>
+									<a class="btn btn-primary w-100 py-3" href="/transaction/new">{% trans %}Créer une transaction pour un client{% endtrans %}</a>
 								</div>
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune transaction de clients</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucune transaction de clients{% endtrans %}</h1>
 								</div>
 							{% else %}
 								<div class="col-8 mb-3">
-									<a class="btn btn-primary w-100 py-3" href="/transaction/new">Créer une transaction pour un client</a>
+									<a class="btn btn-primary w-100 py-3" href="/transaction/new">{% trans %}Créer une transaction pour un client{% endtrans %}</a>
 								</div>
 								<table class="table">
 									<thead>
 										<tr>
 											<th>Id</th>
-											<th>Modepaiement</th>
-											<th>Montant</th>
-											<th>Client</th>
-											<th>Date</th>
-											<th>actions</th>
+											<th>{% trans %}Modepaiement{% endtrans %}</th>
+											<th>{% trans %}Montant{% endtrans %}</th>
+											<th>{% trans %}Client{% endtrans %}</th>
+											<th>{% trans %}Date{% endtrans %}</th>
+											<th>{% trans %}actions{% endtrans %}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -194,8 +194,8 @@
 													{{ transactionc.clientid.nom }}</td>
 												<td>{{ transactionc.date ? transactionc.date|date('Y-m-d') : '' }}</td>
 												<td>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_transaction_show', {'id': transactionc.id}) }}">Voir</a>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_transaction_edit', {'id': transactionc.id}) }}">Editer</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_transaction_show', {'id': transactionc.id}) }}">{% trans %}Voir{% endtrans %}</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_transaction_edit', {'id': transactionc.id}) }}">{% trans %}Editer{% endtrans %}</a>
 													<a href="{{ path('app_transaction_delete', {'id': transactionc.id}) }}">
 														<i class="fa fa-trash fa-1x text-primary"></i>
 													</a>
@@ -206,25 +206,25 @@
 								</table>
 							{% endif %}
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Les abonnements des clients</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Les abonnements des clients{% endtrans %}</h5>
 							</div>
 							{% if abonnementsClients is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucun abonnement de clients</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucun abonnement de clients{% endtrans %}</h1>
 								</div>
 							{% else %}
 								<table>
 									<thead>
 										<tr>
 											<th>Id</th>
-											<th>Datedebut</th>
-											<th>Datefin</th>
-											<th>Client</th>
-											<th>Type</th>
-											<th>Statut</th>
-											<th>Prix</th>
-											<th>actions</th>
+											<th>{% trans %}Date de debut{% endtrans %}</th>
+											<th>{% trans %}Date de fin{% endtrans %}</th>
+											<th>{% trans %}Client{% endtrans %}</th>
+											<th>{% trans %}Type{% endtrans %}</th>
+											<th>{% trans %}Statut{% endtrans %}</th>
+											<th>{% trans %}Prix{% endtrans %}</th>
+											<th>{% trans %}actions{% endtrans %}</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -239,8 +239,8 @@
 												<td>{{ abonnementc.statut }}</td>
 												<td>{{ abonnementc.prix }}</td>
 												<td>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_abonnements_show', {'id': abonnementc.id}) }}">Voir</a>
-													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_abonnements_edit', {'id': abonnementc.id}) }}">Editer</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_abonnements_show', {'id': abonnementc.id}) }}">{% trans %}Voir{% endtrans %}</a>
+													<a class="border-end px-2 border-3 border-primary" href="{{ path('app_abonnements_edit', {'id': abonnementc.id}) }}">{% trans %}Editer{% endtrans %}</a>
 													<a href="{{ path('app_abonnements_delete', {'id': abonnementc.id}) }}">
 														<i class="fa fa-trash fa-1x text-primary"></i>
 													</a>
@@ -262,8 +262,8 @@
 <div class="container-xxl py-5">
 	<div class="container">
 		<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-			<h5 class="section-title ff-secondary text-center text-primary fw-normal">Les Interactions</h5>
-			<h1 class="mb-5">Les échanges sur SanarLav</h1>
+			<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Les Interactions{% endtrans %}</h5>
+			<h1 class="mb-5">{% trans %}Les échanges sur{% endtrans %} SanarLav</h1>
 		</div>
 		<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
 			<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -271,8 +271,8 @@
 					<a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-4">
 						<i class="fa fa-envelope fa-2x text-primary" aria-hidden="true"></i>
 						<div class="ps-3">
-							<small class="text-body">Les contacts</small>
-							<h6 class="mt-n1 mb-0">Messages & Informations</h6>
+							<small class="text-body">{% trans %}Les contacts{% endtrans %}</small>
+							<h6 class="mt-n1 mb-0">{% trans %}Messages & Informations{% endtrans %}</h6>
 						</div>
 					</a>
 				</li>
@@ -283,19 +283,19 @@
 						{% if contacts is empty %}
 							<div class="col-8 row align-items-center justify-content-center">
 								<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
-								<h1 class="mb-5 text-secondary">Aucun message ou information de visiteurs</h1>
+								<h1 class="mb-5 text-secondary">{% trans %}Aucun message ou information de visiteurs{% endtrans %}</h1>
 							</div>
 						{% else %}
 							<table>
 								<thead>
 									<tr>
 										<th>Id</th>
-										<th>Sujet</th>
-										<th>Texte</th>
-										<th>Email</th>
-										<th>Nom</th>
-										<th>Date</th>
-										<th>actions</th>
+										<th>{% trans %}Sujet{% endtrans %}</th>
+										<th>{% trans %}Texte{% endtrans %}</th>
+										<th>{% trans %}Email{% endtrans %}</th>
+										<th>{% trans %}Nom{% endtrans %}</th>
+										<th>{% trans %}Date{% endtrans %}</th>
+										<th>{% trans %}actions{% endtrans %}</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -309,7 +309,7 @@
 											<td>{{ contact.nom }}</td>
 											<td>{{ contact.date ? contact.date|date('Y-m-d H:i:s') : '' }}</td>
 											<td>
-												<a class="border-end px-2 border-3 border-primary" href="{{ path('app_contacts_show', {'id': contact.id}) }}">Voir</a>
+												<a class="border-end px-2 border-3 border-primary" href="{{ path('app_contacts_show', {'id': contact.id}) }}">{% trans %}Voir{% endtrans %}</a>
 												<a href="{{ path('app_contacts_edit', {'id': contact.id}) }}">
 													<i class="fa fa-trash fa-1x text-primary"></i>
 												</a>
@@ -333,10 +333,10 @@
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-				<h1 class="mb-4 text-primary border-bottom border-4 border-primary">Gestion de mon compte
+				<h1 class="mb-4 text-primary border-bottom border-4 border-primary">{% trans %}Gestion de mon compte{% endtrans %}
 					<img src="{{ asset('assets/img/logo.png') }}" style="height:50px" alt="Logo"></h1>
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes affaires</h5>
-				<h1 class="mb-5">Mes actions sur SanarLav</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes affaires{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Mes actions sur{% endtrans %} SanarLav</h1>
 			</div>
 			<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
 				<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -344,8 +344,8 @@
 						<a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-5">
 							<i class="fa fa-shopping-basket fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes demandes</small>
-								<h6 class="mt-n1 mb-0">Commandes</h6>
+								<small class="text-body">{% trans %}Mes demandes{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Commandes{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -353,8 +353,8 @@
 						<a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-5">
 							<i class="fa fa-gavel fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes retours</small>
-								<h6 class="mt-n1 mb-0">Réclammations</h6>
+								<small class="text-body">{% trans %}Mes retours{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Réclammations{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -362,8 +362,8 @@
 						<a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-7">
 							<i class="fa fa-credit-card fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes transactions</small>
-								<h6 class="mt-n1 mb-0">Paiements & Abonnement</h6>
+								<small class="text-body">{% trans %}Mes transactions{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Paiements & Abonnement{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -372,12 +372,12 @@
 					<div id="tab-5" class="tab-pane fade show p-0 active">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/commandes/new">Faire une commande</a>
+								<a class="btn btn-primary w-100 py-3" href="/commandes/new">{% trans %}Faire une commande{% endtrans %}</a>
 							</div>
 							{% if commandes is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune commande</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucune commande{% endtrans %}</h1>
 								</div>
 							{% else %}
 								{% for commande in commandes %}
@@ -386,7 +386,7 @@
 											<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
 											<div class="w-100 d-flex flex-column text-start ps-4">
 												<h5 class="d-flex justify-content-between border-bottom pb-2">
-													<span class="border-end border-2 border-secondary">Commande -
+													<span class="border-end border-2 border-secondary">{% trans %}Commande -{% endtrans %}
 														{{commande.date| date('d-m-Y')}}</span>
 													<span class="text-primary">{{commande.articleid}}</span>
 												</h5>
@@ -401,12 +401,12 @@
 					<div id="tab-6" class="tab-pane fade show p-0">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/reparations/new">Faire une réclamation</a>
+								<a class="btn btn-primary w-100 py-3" href="/reparations/new">{% trans %}Faire une réclamation{% endtrans %}</a>
 							</div>
 							{% if reparations is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-4.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune réclamation</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucune réclamation{% endtrans %}</h1>
 								</div>
 							{% else %}
 								{% for reparation in reparations %}
@@ -415,7 +415,7 @@
 											<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-4.png') }}" alt="" style="width: 80px;">
 											<div class="w-100 d-flex flex-column text-start ps-4">
 												<h5 class="d-flex justify-content-between border-bottom pb-2">
-													<span class="border-end border-2 border-secondary">Réclamation -
+													<span class="border-end border-2 border-secondary">{% trans %}Réclamation -{% endtrans %}
 														{{reparation.date| date('d-m-Y')}}</span>
 													<span class="text-primary">{{reparation.commandeid}}
 														FCFA</span>
@@ -434,15 +434,15 @@
 					<div id="tab-7" class="tab-pane fade show p-0">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/abonnements/new">Prendre un abonnement ...</a>
+								<a class="btn btn-primary w-100 py-3" href="/abonnements/new">{% trans %}Prendre un abonnement{% endtrans %} ...</a>
 							</div>
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes transactions</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes transactions{% endtrans %}</h5>
 							</div>
 							{% if transactions is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucune transaction</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucune transaction{% endtrans %}</h1>
 								</div>
 							{% else %}
 								{% for transaction in transactions %}
@@ -451,7 +451,7 @@
 											<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
 											<div class="w-100 d-flex flex-column text-start ps-4">
 												<h5 class="d-flex justify-content-between border-bottom pb-2">
-													<span class="border-end border-2 border-secondary">Transaction -
+													<span class="border-end border-2 border-secondary">{% trans %}Transaction -{% endtrans %}
 														{{transaction.date| date('d-m-Y')}}</span>
 													<span class="text-primary">{{transaction.montant}}</span>
 												</h5>
@@ -462,12 +462,12 @@
 								{% endfor %}
 							{% endif %}
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes abonnements</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes abonnements{% endtrans %}</h5>
 							</div>
 							{% if abonnements is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-secondary">Aucun abonnement</h1>
+									<h1 class="mb-5 text-secondary">{% trans %}Aucun abonnement{% endtrans %}</h1>
 								</div>
 							{% else %}
 								{% for abonnement in abonnements %}

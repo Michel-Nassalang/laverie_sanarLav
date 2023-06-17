@@ -1,12 +1,12 @@
 {% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}Compte Administrateur
+{% block title %}{% trans %}Compte Administrateur{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Abonnements de SanarLav</h4>
+			<h4 class="header-line">{% trans %}Abonnements de SanarLav{% endtrans %}</h4>
 		</div>
 	</div>
 
@@ -16,7 +16,7 @@
 			<!-- Advanced Tables -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Listes des commandes
+					{% trans %}Listes des commandes{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -25,12 +25,12 @@
 
 								<tr>
 									<th>#</th>
-									<th>Date</th>
-									<th>Article</th>
-									<th>Client</th>
-									<th>Statut</th>
-									<th>Date de mise à jour</th>
-									<th>actions</th>
+									<th>{% trans %}Date{% endtrans %}</th>
+									<th>{% trans %}Article{% endtrans %}</th>
+									<th>{% trans %}Client{% endtrans %}</th>
+									<th>{% trans %}Statut{% endtrans %}</th>
+									<th>{% trans %}Date de mise à jour{% endtrans %}</th>
+									<th>{% trans %}actions{% endtrans %}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -43,13 +43,13 @@
 										<td>{{ commande.statut }}</td>
 										<td>{{ commande.dateUpdate ? commande.dateUpdate|date('Y-m-d H:i:s') : '' }}</td>
 										<td>
-											<a href="{{ path('app_commandes_show', {'id': commande.id}) }}">Voir</a>
-											<a href="{{ path('app_commandes_edit', {'id': commande.id}) }}">Editer</a>
+											<a href="{{ path('app_commandes_show', {'id': commande.id}) }}">{% trans %}Voir{% endtrans %}</a>
+											<a href="{{ path('app_commandes_edit', {'id': commande.id}) }}">{% trans %}Editer{% endtrans %}</a>
 										</td>
 									</tr>
 								{% else %}
 									<tr>
-										<td colspan="12">Pas de commandes présents deans la base</td>
+										<td colspan="12">{% trans %}Pas de commandes présents deans la base{% endtrans %}</td>
 									</tr>
 								{% endfor %}
 							</tbody>

@@ -1,0 +1,179 @@
+'Modification Abonnement': 'Modify Subscription'
+Abonnements: Subscriptions
+Acceuil: Home
+Abonnement: Subscription
+'votre abonnement': 'your subscription'
+'Date & Heure Debut': 'Start Date & Time'
+'Date & Heure Fin': 'End Date & Time'
+Mensuel: Monthly
+Trimestriel: Quarterly
+Annuel: Annual
+Type: Type
+Actif: Active
+Suspendu: Suspended
+Expiré: Expired
+Statut: Status
+Modifier: Edit
+Annuler: Cancel
+'Compte Administrateur': 'Administrator Account'
+'Abonnements de SanarLav': 'SanarLav Subscriptions'
+'Listes des abonnements': 'Subscription Lists'
+'Date de debut': 'Start Date'
+'Date de fin': 'End Date'
+Client: Client
+Prix: Price
+'Date de création': 'Creation Date'
+actions: actions
+Voir: View
+Editer: Edit
+'Pas d''abonnements présents deans la base': 'No subscriptions present in the database'
+'Nouveau abonnement': 'New subscription'
+Supprimer: Delete
+Créer: Create
+'A propos': 'About'
+'A propos de Nous': 'About Us'
+'Bienvenue sur': 'Welcome to'
+'Nous offrons une solution pratique et rapide pour répondre aux besoins de nettoyage de vêtements, de linge de maison et d''autres articles textiles.': 'We offer a practical and fast solution to meet the needs of cleaning clothes, household linens, and other textile items.'
+'Notre mission est de simplifier la vie de nos clients en leur fournissant des services de blanchisserie de haute qualité, avec un service rapide et fiable. Nous comprenons l''importance de vêtements et de textiles propres dans la vie quotidienne, que ce soit pour des raisons professionnelles, personnelles ou pour maintenir une hygiène optimale.': 'Our mission is to simplify the lives of our customers by providing them with high-quality laundry services, with fast and reliable service. We understand the importance of clean clothes and textiles in daily life, whether it's for professional, personal, or optimal hygiene reasons.'
+Ans: Years
+'d''Experiences': 'of Experience'
+Partenaires: Partners
+'De confiance': 'Trustworthy'
+'Lire plus': 'Read more'
+'Membres de la Team': 'Team Members'
+'Chefs de Service': 'Service Managers'
+'Directeur technique': 'Technical Director'
+'Directrice commerciale': 'Commercial Director'
+'Responsable informatique': 'IT Manager'
+'Supérviseur général': 'General Supervisor'
+Témoignages: Testimonials
+'Nos clients disent !!!': 'Our customers say !!!'
+Eleveur: Breeder
+Sécrétaire: Secretary
+Enseignant: Teacher
+Infirmière: Nurse
+'Se deconnecter': 'Logout'
+DASHBOARD: DASHBOARD
+Utilisateurs: Users
+Transactions: Transactions
+Paiements: Payments
+Commandes: Orders
+Réclamations: Claims
+Contacts: Contacts
+Services: Services
+Informations: Information
+Blog: Blog
+FAQ: FAQ
+Contact: Contact
+'Mon compte': 'My Account'
+Compagnie: Company
+'Contactez Nous': 'Contact Us'
+Reservation: Reservation
+'Politique de confidentialité': 'Privacy Policy'
+'Termes & Conditions': 'Terms & Conditions'
+Ouverture: Opening
+'Lundi - Samedi': 'Monday - Saturday'
+'10H - 22H': '10AM - 10PM'
+Dimanche: Sunday
+'12H - 20H': '12PM - 8PM'
+Newsletter: Newsletter
+'Connectez vous à nos newsletters pour voir nos informations et nos éventuelles opportinités.': 'Subscribe to our newsletters to see our information and potential opportunities.'
+'S''inscrire': 'Sign up'
+Home: Home
+Cookies: Cookies
+Help: Help
+FQAs: FAQs
+Actualités: News
+'Ressources populaires': 'Popular Resources'
+'Modification Commande': 'Modify Order'
+Compte: Account
+Demandes: Requests
+'votre commande': 'your order'
+'Date & Heure': 'Date & Time'
+Article: Article
+'Non réglé': 'Unsettled'
+'En traitement': 'In progress'
+Réglé: Settled
+'Listes des commandes': 'Order Lists'
+Date: Date
+'Date de mise à jour': 'Update Date'
+'Pas de commandes présents deans la base': 'No orders present in the database'
+'Nouvelle commande': 'New order'
+Commande: Order
+du: from
+'Statut:': 'Status:'
+'Date de création:': 'Creation Date:'
+'Date de mise à jour:': 'Update Date:'
+'Créer ma commande': 'Create my order'
+'Mes affaires': 'My business'
+'Mes actions sur': 'My actions on'
+'Mes demandes': 'My requests'
+'Mes retours': 'My returns'
+Réclammations: Complaints
+'Mes transactions': 'My transactions'
+'Paiements & Abonnement': 'Payments & Subscription'
+'Faire une commande': 'Place an order'
+'Aucune commande': 'No orders'
+'Commande -': 'Order -'
+'Faire une réclamation': 'Submit a claim'
+'Aucune réclamation': 'No claims'
+'Réclamation -': 'Claim -'
+'Prendre un abonnement': 'Subscribe'
+'Aucune transaction': 'No transactions'
+'Transaction -': 'Transaction -'
+'Mes abonnements': 'My subscriptions'
+'Aucun abonnement': 'No subscriptions'
+'Contactez nous': 'Contact us'
+'Contactez nous pour une quelconque demande': 'Contact us for any inquiry'
+General: General
+Techno: Tech
+'Prenom & Nom': 'First Name & Last Name'
+Email: Email
+Sujet: Subject
+Message: Message
+'Envoyez message': 'Send message'
+'Suppression de Contact': 'Delete Contact'
+'Message envoyé': 'Message sent'
+'Nous vous contacterons si besoin. Merci !!!': 'We will contact you if needed. Thank you!'
+Consultation: Consultation
+'Réclamations de': 'Claims from'
+'Listes des réclammations': 'Claims Lists'
+Nom: Name
+Action: Action
+'Pas de réclammations présents deans la base': 'No claims present in the database'
+Inscription: Registration
+Authentification: Authentication
+'Veuillez créer votre compte': 'Please create your account'
+Prenom: First Name
+Tel: Phone
+Adresse: Address
+'Mot de Passe': 'Password'
+'Confirmation mot de Passe': 'Confirm Password'
+'J''accepte les termes et conditions': 'I accept the terms and conditions'
+'Créer un compte': 'Create an account'
+'J''ai déja un compte': 'I already have an account'
+'Modification Reparation': 'Modify Repair'
+Retours: Returns
+'votre réclammation': 'your claim'
+Description: Description
+'Nouvelle réclamation': 'New claim'
+Soumettre: Submit
+Connexion: Login
+'Veuillez vous connecter': 'Please log in'
+'Vous êtes connecté avec': 'You are logged in with'
+Deconnexion: Logout
+'Se connecter': 'Log in'
+'Se souvenir de moi': 'Remember me'
+'Modification Transaction': 'Modify Transaction'
+Transaction: Transaction
+'Création de transactions pour un client': 'Creating transactions for a client'
+'Mode de paiement': 'Payment method'
+Montant: Amount
+Clients: Clients
+'Nouvelle Transaction': 'New Transaction'
+'valider la transaction': 'validate the transaction'
+'Utilisateurs de': 'Users of'
+'Listes des utilisateurs': 'User Lists'
+Telephone: Telephone
+'Date de Création': 'Creation Date'
+'Pas d''utilisateurs présents deans la base': 'No users present in the database'

@@ -43,7 +43,7 @@
 				</div>
 
 				<div class="right-div">
-					<a href="/logout" class="btn btn-danger pull-right">Se deconnecter</a>
+					<a href="/logout" class="btn btn-danger pull-right">{% trans %}Se deconnecter{% endtrans %}</a>
 				</div>
 			</div>
 		</div>
@@ -55,33 +55,33 @@
 						<div class="navbar-collapse collapse ">
 							<ul id="menu-top" class="nav navbar-nav navbar-right">
 								<li>
-									<a href="/admin" class="menu-top-active">DASHBOARD</a>
+									<a href="/admin" class="menu-top-active">{% trans %}DASHBOARD{% endtrans %}</a>
 								</li>
 
 								<li>
-									<a href="/user">Utilisateurs</a>
+									<a href="/user">{% trans %}Utilisateurs{% endtrans %}</a>
 								</li>
 								<li>
-									<a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">Transactions
+									<a href="#" class="dropdown-toggle" id="ddlmenuItem" data-toggle="dropdown">{% trans %}Transactions{% endtrans %}
 										<i class="fa fa-angle-down"></i>
 									</a>
 									<ul class="dropdown-menu" role="menu" aria-labelledby="ddlmenuItem">
 										<li role="presentation">
-											<a role="menuitem" tabindex="-1" href="/transaction">Paiements</a>
+											<a role="menuitem" tabindex="-1" href="/transaction">{% trans %}Paiements{% endtrans %}</a>
 										</li>
 										<li role="presentation">
-											<a role="menuitem" tabindex="-1" href="/abonnements">Abonnements</a>
+											<a role="menuitem" tabindex="-1" href="/abonnements">{% trans %}Abonnements{% endtrans %}</a>
 										</li>
 									</ul>
 								</li>
 								<li>
-									<a href="/commandes">Commandes</a>
+									<a href="/commandes">{% trans %}Commandes{% endtrans %}</a>
 								</li>
 								<li>
-									<a href="/reparations">Réclamations</a>
+									<a href="/reparations">{% trans %}Réclamations{% endtrans %}</a>
 								</li>
 								<li>
-									<a href="/contacts/all">Contacts</a>
+									<a href="/contacts/all">{% trans %}Contacts{% endtrans %}</a>
 								</li>
 
 							</ul>

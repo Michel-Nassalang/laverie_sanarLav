@@ -6,7 +6,7 @@
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Réclamations de SanarLav</h4>
+			<h4 class="header-line">{% trans %}Réclamations de{% endtrans %} SanarLav</h4>
 		</div>
 	</div>
 
@@ -16,7 +16,7 @@
 			<!-- Advanced Tables -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Listes des réclammations
+					{% trans %}Listes des réclammations{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -24,12 +24,12 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Sujet</th>
-									<th>Message</th>
-									<th>Email</th>
-									<th>Nom</th>
-									<th>Date</th>
-									<th>Action</th>
+									<th>{% trans %}Sujet{% endtrans %}</th>
+									<th>{% trans %}Message{% endtrans %}</th>
+									<th>{% trans %}Email{% endtrans %}</th>
+									<th>{% trans %}Nom{% endtrans %}</th>
+									<th>{% trans %}Date{% endtrans %}</th>
+									<th>{% trans %}Action{% endtrans %}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -42,12 +42,12 @@
 										<td>{{ contact.nom }}</td>
 										<td>{{ contact.date ? contact.date|date('Y-m-d H:i:s') : '' }}</td>
 										<td>
-											<a href="{{ path('app_contacts_show', {'id': contact.id}) }}">Voir</a>
+											<a href="{{ path('app_contacts_show', {'id': contact.id}) }}">{% trans %}Voir{% endtrans %}</a>
 										</td>
 									</tr>
 								{% else %}
 									<tr>
-										<td colspan="12">Pas de réclammations présents deans la base</td>
+										<td colspan="12">{% trans %}Pas de réclammations présents deans la base{% endtrans %}</td>
 									</tr>
 								{% endfor %}
 							</tbody>

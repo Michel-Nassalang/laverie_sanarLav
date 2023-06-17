@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nouveau abonnement
+{% block title %}{% trans %}Nouveau abonnement{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Abonnements</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Abonnements{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
@@ -19,7 +19,7 @@
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
 							{{app.user.nom}}</li>
 					{% endif %}
-					<li class="breadcrumb-item text-white active" aria-current="page">Abonnement</li>
+					<li class="breadcrumb-item text-white active" aria-current="page">{% trans %}Abonnement{% endtrans %}</li>
 				</ol>
 				{% if app.user %}
 					<p class="">{{app.user.email}}</p>

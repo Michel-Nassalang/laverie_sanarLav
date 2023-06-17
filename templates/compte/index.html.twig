@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mon compte
+{% block title %}{% trans %}Mon compte{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="container-xxl py-5 bg-dark hero-header mb-5">
 		<div class="container text-center my-5 pt-5 pb-4">
-			<h1 class="display-3 text-white mb-3 animated slideInDown">Compte</h1>
+			<h1 class="display-3 text-white mb-3 animated slideInDown">{% trans %}Compte{% endtrans %}</h1>
 			<a href="/logout">
 				<i class="fa fa-power-off fa-1x text-primary"></i>
 			</a>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb justify-content-center text-uppercase">
 					<li class="breadcrumb-item">
-						<a href="/">Acceuil</a>
+						<a href="/">{% trans %}Acceuil{% endtrans %}</a>
 					</li>
 					{% if app.user %}
 						<li class="breadcrumb-item text-white active" aria-current="page">{{app.user.prenom}}
@@ -30,8 +30,8 @@
 	<div class="container-xxl py-5">
 		<div class="container">
 			<div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-				<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes affaires</h5>
-				<h1 class="mb-5">Mes actions sur SanarLav</h1>
+				<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes affaires{% endtrans %}</h5>
+				<h1 class="mb-5">{% trans %}Mes actions sur{% endtrans %} SanarLav</h1>
 			</div>
 			<div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
 				<ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -39,8 +39,8 @@
 						<a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
 							<i class="fa fa-shopping-basket fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes demandes</small>
-								<h6 class="mt-n1 mb-0">Commandes</h6>
+								<small class="text-body">{% trans %}Mes demandes{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Commandes{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -48,8 +48,8 @@
 						<a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
 							<i class="fa fa-gavel fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes retours</small>
-								<h6 class="mt-n1 mb-0">Réclammations</h6>
+								<small class="text-body">{% trans %}Mes retours{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Réclammations{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -57,8 +57,8 @@
 						<a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
 							<i class="fa fa-credit-card fa-2x text-primary"></i>
 							<div class="ps-3">
-								<small class="text-body">Mes transactions</small>
-								<h6 class="mt-n1 mb-0">Paiements & Abonnement</h6>
+								<small class="text-body">{% trans %}Mes transactions{% endtrans %}</small>
+								<h6 class="mt-n1 mb-0">{% trans %}Paiements & Abonnement{% endtrans %}</h6>
 							</div>
 						</a>
 					</li>
@@ -67,12 +67,12 @@
 					<div id="tab-1" class="tab-pane fade show p-0 active">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/commandes/new">Faire une commande</a>
+								<a class="btn btn-primary w-100 py-3" href="/commandes/new">{% trans %}Faire une commande{% endtrans %}</a>
 							</div>
 							{% if commandes is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-danger">Aucune commande</h1>
+									<h1 class="mb-5 text-danger">{% trans %}Aucune commande{% endtrans %}</h1>
 								</div>
 							{% endif %}
 							{% for commande in commandes %}
@@ -81,7 +81,7 @@
 										<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-1.png') }}" alt="" style="width: 80px;">
 										<div class="w-100 d-flex flex-column text-start ps-4">
 											<h5 class="d-flex justify-content-between border-bottom pb-2">
-												<span class="border-end border-2 border-secondary">Commande -
+												<span class="border-end border-2 border-secondary">{% trans %}Commande -{% endtrans %}
 													{{commande.date| date('d-m-Y')}}</span>
 												<span class="text-primary">{{commande.articleid}}</span>
 											</h5>
@@ -95,12 +95,12 @@
 					<div id="tab-2" class="tab-pane fade show p-0">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/reparations/new">Faire une réclamation</a>
+								<a class="btn btn-primary w-100 py-3" href="/reparations/new">{% trans %}Faire une réclamation{% endtrans %}</a>
 							</div>
 							{% if reparations is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-4.png') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-danger">Aucune réclamation</h1>
+									<h1 class="mb-5 text-danger">{% trans %}Aucune réclamation{% endtrans %}</h1>
 								</div>
 							{% endif %}
 							{% for reparation in reparations %}
@@ -109,7 +109,7 @@
 										<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/propos-4.png') }}" alt="" style="width: 80px;">
 										<div class="w-100 d-flex flex-column text-start ps-4">
 											<h5 class="d-flex justify-content-between border-bottom pb-2">
-												<span class="border-end border-2 border-secondary">Réclamation -
+												<span class="border-end border-2 border-secondary">{% trans %}Réclamation -{% endtrans %}
 													{{reparation.date| date('d-m-Y')}}</span>
 												<span class="text-primary">{{reparation.commandeid}}
 													FCFA</span>
@@ -127,15 +127,15 @@
 					<div id="tab-3" class="tab-pane fade show p-0">
 						<div class="row g-4 justify-content-center">
 							<div class="col-8">
-								<a class="btn btn-primary w-100 py-3" href="/abonnements/new">Prendre un abonnement ...</a>
+								<a class="btn btn-primary w-100 py-3" href="/abonnements/new">{% trans %}Prendre un abonnement{% endtrans %} ...</a>
 							</div>
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes transactions</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes transactions{% endtrans %}</h5>
 							</div>
 							{% if transactions is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-danger">Aucune transaction</h1>
+									<h1 class="mb-5 text-danger">{% trans %}Aucune transaction{% endtrans %}</h1>
 								</div>
 							{% endif %}
 							{% for transaction in transactions %}
@@ -144,7 +144,7 @@
 										<img class="flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
 										<div class="w-100 d-flex flex-column text-start ps-4">
 											<h5 class="d-flex justify-content-between border-bottom pb-2">
-												<span class="border-end border-2 border-secondary">Transaction -
+												<span class="border-end border-2 border-secondary">{% trans %}Transaction -{% endtrans %}
 													{{transaction.date| date('d-m-Y')}}</span>
 												<span class="text-primary">{{transaction.montant}}</span>
 											</h5>
@@ -154,12 +154,12 @@
 								</div>
 							{% endfor %}
 							<div class="text-center" data-wow-delay="0.1s">
-								<h5 class="section-title ff-secondary text-center text-primary fw-normal">Mes abonnements</h5>
+								<h5 class="section-title ff-secondary text-center text-primary fw-normal">{% trans %}Mes abonnements{% endtrans %}</h5>
 							</div>
 							{% if abonnements is empty %}
 								<div class="col-8 row align-items-center justify-content-center">
 									<img class="col-12 flex-shrink-0 img-fluid rounded" src="{{ asset('assets/img/payement.jpg') }}" alt="" style="width: 80px;">
-									<h1 class="mb-5 text-danger">Aucun abonnement</h1>
+									<h1 class="mb-5 text-danger">{% trans %}Aucun abonnement{% endtrans %}</h1>
 								</div>
 							{% endif %}
 							{% for abonnement in abonnements %}

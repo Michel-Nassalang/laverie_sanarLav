@@ -1,12 +1,12 @@
 {% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}Compte Administrateur
+{% block title %}{% trans %}Compte Administrateur{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Utilisateurs de SanarLav</h4>
+			<h4 class="header-line">{% trans %}Utilisateurs de SanarLav{% endtrans %}</h4>
 		</div>
 	</div>
 
@@ -16,7 +16,7 @@
 			<!-- Advanced Tables -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Listes des transactions
+					{% trans %}Listes des transactions{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -24,12 +24,12 @@
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>Modepaiement</th>
-									<th>Montant</th>
-									<th>Client</th>
-									<th>commande</th>
-									<th>Date</th>
-									<th>actions</th>
+									<th>{% trans %}Mode de {% trans %}paiement{% endtrans %}</th>
+									<th>{% trans %}Montant{% endtrans %}</th>
+									<th>{% trans %}Client{% endtrans %}</th>
+									<th>{% trans %}commande{% endtrans %}</th>
+									<th>{% trans %}Date{% endtrans %}</th>
+									<th>{% trans %}actions{% endtrans %}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -42,13 +42,13 @@
 										<td>{{ transaction.commandeid }}</td>
 										<td class="center">{{ transaction.date ? transaction.date|date('Y-m-d') : '' }}</td>
 										<td class="center">
-											<a href="{{ path('app_transaction_show', {'id': transaction.id}) }}">Voir</a>
-											<a href="{{ path('app_transaction_edit', {'id': transaction.id}) }}">Editer</a>
+											<a href="{{ path('app_transaction_show', {'id': transaction.id}) }}">{% trans %}Voir{% endtrans %}</a>
+											<a href="{{ path('app_transaction_edit', {'id': transaction.id}) }}">{% trans %}Editer{% endtrans %}</a>
 										</td>
 									</tr>
 								{% else %}
 									<tr>
-										<td colspan="12">Pas d'utilisateurs présents deans la base</td>
+										<td colspan="12">{% trans %}Pas d'utilisateurs présents deans la base{% endtrans %}</td>
 									</tr>
 								{% endfor %}
 							</tbody>

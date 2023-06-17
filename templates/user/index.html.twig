@@ -1,12 +1,12 @@
 {% extends 'admin/base_admin.html.twig' %}
 
-{% block title %}Compte Administrateur
+{% block title %}{% trans %}Compte Administrateur{% endtrans %}
 {% endblock %}
 
 {% block body %}
 	<div class="row pad-botm">
 		<div class="col-md-12">
-			<h4 class="header-line">Utilisateurs de SanarLav</h4>
+			<h4 class="header-line">{% trans %}Utilisateurs de{% endtrans %} SanarLav</h4>
 		</div>
 	</div>
 
@@ -16,19 +16,19 @@
 			<!-- Advanced Tables -->
 			<div class="panel panel-default">
 				<div class="panel-heading">
-					Listes des utilisateurs
+					{% trans %}Listes des utilisateurs{% endtrans %}
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 							<thead>
 								<tr>
-									<th>Prenom</th>
-									<th>Nom</th>
-									<th>Email</th>
-									<th>Telephone</th>
-									<th>Adresse</th>
-									<th>Date de Création</th>
+									<th>{% trans %}Prenom{% endtrans %}</th>
+									<th>{% trans %}Nom{% endtrans %}</th>
+									<th>{% trans %}Email{% endtrans %}</th>
+									<th>{% trans %}Telephone{% endtrans %}</th>
+									<th>{% trans %}Adresse{% endtrans %}</th>
+									<th>{% trans %}Date de Création{% endtrans %}</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -43,7 +43,7 @@
 									</tr>
 								{% else %}
 									<tr>
-										<td colspan="12">Pas d'utilisateurs présents deans la base</td>
+										<td colspan="12">{% trans %}Pas d'utilisateurs présents deans la base{% endtrans %}</td>
 									</tr>
 								{% endfor %}
 							</tbody>
