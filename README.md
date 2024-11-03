@@ -6,7 +6,7 @@
 Ce projet est une application de gestion de laverie développée avec le framework Symfony. Elle permet de gérer les commandes de services de lavage, les abonnements, les réclamations, les utilisateurs, ainsi qu'une interface pour l'administration. Elle est conçue pour faciliter la gestion de l’activité et fournir une vue d'ensemble des opérations de la laverie.
 
 ## Execution du projet
-    docker-compose up --build -d
+    docker-compose up 
 
 
 ## Identifiants par défaut
